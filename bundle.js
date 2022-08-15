@@ -1,5 +1,5 @@
-     //just some code to make the sound work
-      /*var clicksound = new Audio();
+//just some code to make the sound work
+/*var clicksound = new Audio();
       clicksound.src =
         "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
       function PlaySound210() {
@@ -54,12 +54,11 @@
     camerasound.play();
   }*/
 
-
-~function() {
+~function () {
   "use strict";
   var I = I || {};
   I.scope = {};
-  I.checkStringArgs = function(r, p, w) {
+  I.checkStringArgs = function (r, p, w) {
     if (null == r)
       throw new TypeError(
         "The 'this' value for String.prototype." +
@@ -82,10 +81,10 @@
   I.defineProperty =
     I.ASSUME_ES5 || "function" == typeof Object.defineProperties
       ? Object.defineProperty
-      : function(r, p, w) {
+      : function (r, p, w) {
           r != Array.prototype && r != Object.prototype && (r[p] = w.value);
         };
-  I.getGlobal = function(r) {
+  I.getGlobal = function (r) {
     return "undefined" != typeof window && window === r
       ? r
       : "undefined" != typeof global && null != global
@@ -93,7 +92,7 @@
       : r;
   };
   I.global = I.getGlobal(this);
-  I.polyfill = function(r, p) {
+  I.polyfill = function (r, p) {
     if (p) {
       var w = I.global;
       r = r.split(".");
@@ -110,20 +109,20 @@
         I.defineProperty(w, r, {
           configurable: !0,
           writable: !0,
-          value: p
+          value: p,
         });
     }
   };
-  I.stringPadding = function(r, p) {
+  I.stringPadding = function (r, p) {
     r = void 0 !== r ? String(r) : " ";
     return 0 < p && r ? r.repeat(Math.ceil(p / r.length)).substring(0, p) : "";
   };
   I.polyfill(
     "String.prototype.padStart",
-    function(r) {
+    function (r) {
       return r
         ? r
-        : function(p, w) {
+        : function (p, w) {
             var a = I.checkStringArgs(this, null, "padStart");
             return I.stringPadding(w, p - a.length) + a;
           };
@@ -131,15 +130,15 @@
     "es8",
     "es3"
   );
-  I.owns = function(r, p) {
+  I.owns = function (r, p) {
     return Object.prototype.hasOwnProperty.call(r, p);
   };
   I.polyfill(
     "Object.entries",
-    function(r) {
+    function (r) {
       return r
         ? r
-        : function(p) {
+        : function (p) {
             var w = [],
               a;
             for (a in p) I.owns(p, a) && w.push([a, p[a]]);
@@ -151,10 +150,10 @@
   );
   I.polyfill(
     "Object.values",
-    function(r) {
+    function (r) {
       return r
         ? r
-        : function(p) {
+        : function (p) {
             var w = [],
               a;
             for (a in p) I.owns(p, a) && w.push(p[a]);
@@ -166,10 +165,10 @@
   );
   I.polyfill(
     "Array.prototype.includes",
-    function(r) {
+    function (r) {
       return r
         ? r
-        : function(p, w) {
+        : function (p, w) {
             var a = this;
             a instanceof String && (a = String(a));
             var e = a.length;
@@ -184,13 +183,13 @@
     "es7",
     "es3"
   );
-  (function(r) {
+  (function (r) {
     function p(a) {
       if (w[a]) return w[a].exports;
       var e = (w[a] = {
         i: a,
         l: !1,
-        exports: {}
+        exports: {},
       });
       r[a].call(e.exports, e, e.exports, p);
       e.l = !0;
@@ -199,24 +198,24 @@
     var w = {};
     p.m = r;
     p.c = w;
-    p.d = function(a, e, E) {
+    p.d = function (a, e, E) {
       p.o(a, e) ||
         Object.defineProperty(a, e, {
           enumerable: !0,
-          get: E
+          get: E,
         });
     };
-    p.r = function(a) {
+    p.r = function (a) {
       "undefined" !== typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(a, Symbol.toStringTag, {
-          value: "Module"
+          value: "Module",
         });
       Object.defineProperty(a, "__esModule", {
-        value: !0
+        value: !0,
       });
     };
-    p.t = function(a, e) {
+    p.t = function (a, e) {
       e & 1 && (a = p(a));
       if (e & 8 || (e & 4 && "object" === typeof a && a && a.__esModule))
         return a;
@@ -224,38 +223,38 @@
       p.r(E);
       Object.defineProperty(E, "default", {
         enumerable: !0,
-        value: a
+        value: a,
       });
       if (e & 2 && "string" != typeof a)
         for (var x in a)
           p.d(
             E,
             x,
-            function(e) {
+            function (e) {
               return a[e];
             }.bind(null, x)
           );
       return E;
     };
-    p.n = function(a) {
+    p.n = function (a) {
       var e =
         a && a.__esModule
-          ? function() {
+          ? function () {
               return a["default"];
             }
-          : function() {
+          : function () {
               return a;
             };
       p.d(e, "a", e);
       return e;
     };
-    p.o = function(a, e) {
+    p.o = function (a, e) {
       return Object.prototype.hasOwnProperty.call(a, e);
     };
     p.p = "";
     return p((p.s = 0));
   })([
-    function(r, p, w) {
+    function (r, p, w) {
       function a() {
         window.dataLayer.push(arguments);
       }
@@ -342,7 +341,7 @@
                 "#ffd300",
                 "#00e00b",
                 "#226ef6",
-                "#a913cf"
+                "#a913cf",
               ][Math.floor((Date.now() / 200) % 6)],
               [
                 "#ff9000",
@@ -350,7 +349,7 @@
                 "#00e00b",
                 "#226ef6",
                 "#a913cf",
-                "#ff1000"
+                "#ff1000",
               ][Math.floor((Date.now() / 200) % 6)],
               (Date.now() / 200) % 1
             );
@@ -358,44 +357,32 @@
           case 37:
             return "#FFFF00";
           case 38:
-             return T(
-              [
-                "#ffffff",
-                "#000000",
-              ][Math.floor((Date.now() / 400) % 2)],
-              [
-                "#000000",
-                "#ffffff"
-              ][Math.floor((Date.now() / 400) % 2)],
+            return T(
+              ["#ffffff", "#000000"][Math.floor((Date.now() / 400) % 2)],
+              ["#000000", "#ffffff"][Math.floor((Date.now() / 400) % 2)],
               (Date.now() / 400) % 1
             );
           case 39:
             return "#A177FC";
           case 40:
             return "#56E012";
-            case 41:
+          case 41:
             return "#15CD2D";
-            case 42:
+          case 42:
             return "#A277FB";
-            case 43:
+          case 43:
             return "#FF7F00";
-            case 44:
+          case 44:
             return T(
-              [
-                "#b493d3",
-                "#ffe6f4",
-              ][Math.floor((Date.now() / 400) % 2)],
-              [
-                "#ffe6f4",
-                "#b493d3"
-              ][Math.floor((Date.now() / 400) % 2)],
+              ["#b493d3", "#ffe6f4"][Math.floor((Date.now() / 400) % 2)],
+              ["#ffe6f4", "#b493d3"][Math.floor((Date.now() / 400) % 2)],
               (Date.now() / 400) % 1
             );
-              case 45:
+          case 45:
             return "#b493d3";
-              case 46:
+          case 46:
             return "#ffe6f4";
-              case 47:
+          case 47:
             return "#008080";
           case 48:
             return "#8FFF00";
@@ -485,12 +472,12 @@
               getColor: () => "#FFFFFF",
               getBlend: () => 0,
               health: {
-                get: () => 1
+                get: () => 1,
               },
               shield: {
-                get: () => 1
-              }
-            }
+                get: () => 1,
+              },
+            },
           },
           facing: c.facing,
           shape: c.shape,
@@ -501,9 +488,9 @@
           guns: {
             length: c.guns.length,
             getPositions: () => Array(c.guns.length).fill(0),
-            update: () => {}
+            update: () => {},
           },
-          turrets: c.turrets.map(b => {
+          turrets: c.turrets.map((b) => {
             let d = D(b.index);
             d.realSize = (d.realSize / d.size) * c.size * b.sizeFactor;
             d.size = c.size * b.sizeFactor;
@@ -512,7 +499,7 @@
             d.direction = b.direction;
             d.facing = b.direction + b.angle;
             return d;
-          })
+          }),
         };
       }
 
@@ -536,13 +523,13 @@
           a = b,
           y = b;
         return {
-          set: c => {
+          set: (c) => {
             b !== c && ((y = a), (b = c), (d = Date.now()));
           },
           get: () => {
             let h = (Date.now() - d) / 1e3;
             return (a = h < n ? y + (b - y) * Math.pow(h / n, 1 / c) : b);
-          }
+          },
         };
       }
 
@@ -599,8 +586,8 @@
               white: c[18],
               guiblack: c[19],
               paletteSize: f,
-              border: n
-            }
+              border: n,
+            },
           };
         } catch (h) {}
         try {
@@ -627,14 +614,14 @@
             f.grey,
             f.dgrey,
             f.white,
-            f.guiblack
+            f.guiblack,
           ])
             if (!b.match(/^#[0-9a-fA-F]{6}$/)) return null;
           return {
             isJSON: !0,
             name: ("string" === typeof c && c) || "Unknown Theme",
             author: ("string" === typeof a && a) || "",
-            content: f
+            content: f,
           };
         } catch (h) {}
         return null;
@@ -669,14 +656,14 @@
           h.grey,
           h.dgrey,
           h.white,
-          h.guiblack
+          h.guiblack,
         ]) {
           let c = parseInt(d.slice(1), 16);
           b += String.fromCharCode(c >> 16, (c >> 8) & 255, c & 255);
         }
         return btoa(b).replace(/=+/, "");
       }
-   
+
       function t() {
         if (!ua) {
           ua = !0;
@@ -698,30 +685,27 @@
             b.mobile &&
               !d &&
               Y.push({
-                text:
-                  "Add the game to home screen to always enable fullscreen!",
+                text: "Add the game to home screen to always enable fullscreen!",
                 status: 2,
                 alpha: 0,
-                time: Date.now()
+                time: Date.now(),
               });
           }
           H.submitToLocalStorage("optScreenshotMode");
-          B.graphical.screenshotMode = document.getElementById(
-            "optScreenshotMode"
-          ).checked;
+          B.graphical.screenshotMode =
+            document.getElementById("optScreenshotMode").checked;
           H.submitToLocalStorage("optFancy");
           B.graphical.pointy = !document.getElementById("optNoPointy").checked;
           H.submitToLocalStorage("optNoPointy");
           B.graphical.sharp = document.getElementById("optPointy").checked;
           H.submitToLocalStorage("optPointy");
-          B.graphical.fancyAnimations = !document.getElementById("optFancy")
-            .checked;
+          B.graphical.fancyAnimations =
+            !document.getElementById("optFancy").checked;
           H.submitToLocalStorage("optShield");
           B.graphical.shieldbars = document.getElementById("optShield").checked;
           H.submitToLocalStorage("optPrediction");
-          B.lag.newPrediction = document.getElementById(
-            "optPrediction"
-          ).checked;
+          B.lag.newPrediction =
+            document.getElementById("optPrediction").checked;
           H.submitToLocalStorage("optAutoLevel");
           b.autoLevel = document.getElementById("optAutoLevel").checked;
           H.submitToLocalStorage("optBorders");
@@ -768,10 +752,10 @@
               }/mockups.json`,
               c = () =>
                 H.pullJSON(a)
-                  .then(b => {
+                  .then((b) => {
                     M = b;
                   })
-                  .catch(b => {
+                  .catch((b) => {
                     console.error(b);
                     setTimeout(() => c(), 5e3);
                   });
@@ -913,12 +897,12 @@
         (b.died || b.disconnected) && V.drawCanvas(g);
       }
       Object.values ||
-        (Object.values = function(b) {
-          return Object.keys(b).map(d => b[d]);
+        (Object.values = function (b) {
+          return Object.keys(b).map((d) => b[d]);
         });
       Object.entries ||
-        (Object.entries = function(b) {
-          return Object.keys(b).map(d => [d, b[d]]);
+        (Object.entries = function (b) {
+          return Object.keys(b).map((d) => [d, b[d]]);
         });
       let b = w(1),
         H = w(2),
@@ -934,12 +918,12 @@
         ia = !0;
         a("event", "yes_adblock", {
           event_category: "adblock_detection",
-          non_interaction: !0
+          non_interaction: !0,
         });
       }).on(!1, () => {
         a("event", "no_adblock", {
           event_category: "adblock_detection",
-          non_interaction: !0
+          non_interaction: !0,
         });
       });
 
@@ -958,15 +942,15 @@
           sharp: !1,
           fontSizeBoost: 1,
           shieldbars: !1,
-          neon: !1
+          neon: !1,
         },
         gui: {
-          expectedMaxSkillLevel: 9
+          expectedMaxSkillLevel: 9,
         },
         lag: {
           memory: 60,
-          newPrediction: !1
-        }
+          newPrediction: !1,
+        },
       };
       b.config = B;
       let T = (b, a, c = 0.5) => {
@@ -1003,30 +987,32 @@
                 n = y;
                 f = !0;
               },
-              check: c => {
+              check: (c) => {
                 let h = Math.round(c.x - b);
                 c = Math.round(c.y - d);
                 return f && 0 <= h && 0 <= c && h <= a && c <= n;
               },
               hide: () => {
                 f = !1;
-              }
+              },
             };
           }
-          return c => {
+          return (c) => {
             let d = [];
             for (let a = 0; a < c; a++) d.push(b());
             return {
               place: (b, ...c) => {
                 if (b >= d.length)
-                  throw (console.error(b, d),
-                  Error("Trying to reference a clickable outside a region!"));
+                  throw (
+                    (console.error(b, d),
+                    Error("Trying to reference a clickable outside a region!"))
+                  );
                 d[b].set(...c);
               },
               hide: () => {
                 for (let b of d) b.hide();
               },
-              check: b => d.findIndex(c => c.check(b))
+              check: (b) => d.findIndex((c) => c.check(b)),
             };
           };
         })();
@@ -1034,7 +1020,7 @@
           stat: b(10),
           upgrade: b(20),
           hover: b(1),
-          skipUpgrades: b(1)
+          skipUpgrades: b(1),
         };
       })();
       b.statHover = !1;
@@ -1058,7 +1044,7 @@
           entries() {
             return Object.entries(this.elements).map(([b, a]) => ({
               id: +b,
-              data: a
+              data: a,
             }));
           }
         },
@@ -1077,7 +1063,7 @@
                 ? (this.map[d.id].now = d)
                 : (this.map[d.id] = {
                     old: null,
-                    now: d
+                    now: d,
                   });
           }
           get() {
@@ -1093,7 +1079,7 @@
                       y: b * d.y + a * c.y,
                       color: d.color,
                       size: b * d.size + a * c.size,
-                      alpha: 1
+                      alpha: 1,
                     }
                   : {
                       type: d.type,
@@ -1102,7 +1088,7 @@
                       y: d.y,
                       color: d.color,
                       size: d.size,
-                      alpha: b
+                      alpha: b,
                     }
                 : {
                     type: c.type,
@@ -1111,7 +1097,7 @@
                     y: c.y,
                     color: c.color,
                     size: c.size,
-                    alpha: a
+                    alpha: a,
                   }
             );
           }
@@ -1136,7 +1122,7 @@
               position: b.position,
               barColor: e(this.bar),
               label: this.name ? this.name + " - " + b.name : b.name,
-              score: this.score.get()
+              score: this.score.get(),
             };
           }
         },
@@ -1155,7 +1141,7 @@
             b.sort((b, a) => a.score - b.score);
             return {
               data: b,
-              max: a
+              max: a,
             };
           }
           update(b) {
@@ -1184,14 +1170,14 @@
           updatetime: 0,
           lastlag: 0,
           rendergap: 0,
-          lastuplink: 0
+          lastuplink: 0,
         }),
         Aa = 0,
         oa = 0,
         pa = 0,
         Z = [["norm"]],
         A = {
-          getStatNames: b => {
+          getStatNames: (b) => {
             switch (b) {
               case 1:
                 return "Body Damage;Max Health;Bullet Speed;Bullet Health;Bullet Penetration;Bullet Damage;Engine Acceleration;Movement Speed;Shield Regeneration;Shield Capacity".split(
@@ -1236,62 +1222,62 @@
               amount: 0,
               color: "purple",
               cap: 1,
-              softcap: 1
+              softcap: 1,
             },
             {
               amount: 0,
               color: "pink",
               cap: 1,
-              softcap: 1
+              softcap: 1,
             },
             {
               amount: 0,
               color: "blue",
               cap: 1,
-              softcap: 1
+              softcap: 1,
             },
             {
               amount: 0,
               color: "lgreen",
               cap: 1,
-              softcap: 1
+              softcap: 1,
             },
             {
               amount: 0,
               color: "red",
               cap: 1,
-              softcap: 1
+              softcap: 1,
             },
             {
               amount: 0,
               color: "yellow",
               cap: 1,
-              softcap: 1
+              softcap: 1,
             },
             {
               amount: 0,
               color: "green",
               cap: 1,
-              softcap: 1
+              softcap: 1,
             },
             {
               amount: 0,
               color: "teal",
               cap: 1,
-              softcap: 1
+              softcap: 1,
             },
             {
               amount: 0,
               color: "gold",
               cap: 1,
-              softcap: 1
+              softcap: 1,
             },
             {
               amount: 0,
               color: "orange",
               cap: 1,
-              softcap: 1
-            }
+              softcap: 1,
+            },
           ],
           points: 0,
           upgrades: [],
@@ -1302,7 +1288,7 @@
               c = 0,
               h = q(0, 10);
             return {
-              setScore: d => {
+              setScore: (d) => {
                 d
                   ? (h.set(d), a > h.get() && (a = c = 0))
                   : ((b = 3), (a = c = 0), (h = q(0, 10)));
@@ -1319,14 +1305,14 @@
               getProgress: () =>
                 b ? Math.min(1, Math.max(0, (h.get() - a) / b)) : 0,
               getScore: () => h.get(),
-              getLevel: () => c
+              getLevel: () => c,
             };
           })(),
           type: 0,
           fps: 0,
           color: 0,
           accel: 0,
-          party: 0
+          party: 0,
         };
       b.clearUpgrades = () => {
         A.upgrades = [];
@@ -1350,7 +1336,7 @@
         Ha = Number.isNaN(Ga) ? (xa ? 1 : 0) : Ga,
         Za = () => {
           var a = b.servers.filter(
-            b => null != b.visible && b.visible <= Ha && b.prefer
+            (b) => null != b.visible && b.visible <= Ha && b.prefer
           );
           let e = Infinity,
             c = [];
@@ -1363,7 +1349,7 @@
           return c[Math.floor(Math.random() * c.length)];
         };
       b.server =
-        (a => {
+        ((a) => {
           a.startsWith("#") && (a = a.slice(1));
           let [, d, c] = a.match(/^([a-zA-Z]+)([0-9]*)$/) || [];
           if (d) b.partyLink = +c || 0;
@@ -1385,11 +1371,11 @@
               (h.host = u));
             return null;
           }
-          return b.servers.find(b => b.id === d) || null;
+          return b.servers.find((b) => b.id === d) || null;
         })(location.hash) ||
-        b.servers.find(b => b.id === N.gameMode) ||
+        b.servers.find((b) => b.id === N.gameMode) ||
         Za();
-      let $a = a => {
+      let $a = (a) => {
           var d = b.codeTable[2];
           let c = [],
             h = [];
@@ -1432,7 +1418,7 @@
               !c[a + 1].delay &&
               ((u = c[a]), (c[a] = c[a + 1]), (c[a + 1] = u), a++);
           c = c.filter(({ id: b }) => !h.includes(b));
-          return c.map(b => b.to).join(" ");
+          return c.map((b) => b.to).join(" ");
         },
         aa = document.getElementById("serverSelector").parentNode.parentNode,
         ab = document.getElementById("serverSelector"),
@@ -1499,7 +1485,7 @@
             c = c.match(/^([A-Za-z ]+[A-Za-z])\s*\[([0-9\-]+)\]\s*(.+)?$/) || [
               c,
               c,
-              null
+              null,
             ];
             var h = c[1]
                 ? {
@@ -1513,7 +1499,7 @@
                     "Balance Update": "balance-update",
                     "Balance Update Details": "balance",
                     Balance: "balance",
-                    Patch: "patch"
+                    Patch: "patch",
                   }[c[1]]
                 : null,
               d = document.createElement("div");
@@ -1528,7 +1514,7 @@
                   year: "numeric",
                   month: "long",
                   day: "numeric",
-                  timeZone: "UTC"
+                  timeZone: "UTC",
                 })
               );
             }
@@ -1539,7 +1525,7 @@
               let [a, u, k] = b
                 .shift()
                 .split(",")
-                .map(b => b.trim());
+                .map((b) => b.trim());
               var n = "table" === k;
               let x = "radio" === k,
                 ha = Math.ceil((new Date(u.trim()) - Date.now()) / 36e5);
@@ -1569,7 +1555,7 @@
               h = (() => {
                 let b = [],
                   c = [],
-                  f = new Promise(b => {
+                  f = new Promise((b) => {
                     let a = !1;
                     sa.addEventListener("scroll", () => {
                       if (!a) {
@@ -1581,16 +1567,17 @@
                           ((a = !0), b());
                       }
                     });
-                  })
-     
+                  });
+
                 L.onclick = () => {
                   L.remove();
                   let a = b
-                      .map(b => parseInt(b.title, 10))
+                      .map((b) => parseInt(b.title, 10))
                       .sort((b, a) => b - a),
-                    c = "#2196f3 #00adc3 #009688 #4caf50 #e8ae00 #ff8200 #ff0000".split(
-                      " "
-                    );
+                    c =
+                      "#2196f3 #00adc3 #009688 #4caf50 #e8ae00 #ff8200 #ff0000".split(
+                        " "
+                      );
                   for (let h of b) {
                     var f = parseInt(h.title, 10);
                     h.className = "count";
@@ -1614,8 +1601,8 @@
                 };
                 let h = null,
                   y = 0;
-                return d => {
-                  let e = b =>
+                return (d) => {
+                  let e = (b) =>
                       (d ? d + " - " : "") + b + " vote" + (1 === b ? "" : "s"),
                     u = y++,
                     n = document.createElement("label");
@@ -1628,7 +1615,7 @@
                   f.then(() => {
                     let { voted: b, votes: f } = c[u] || {
                       voted: !1,
-                      votes: 0
+                      votes: 0,
                     };
                     g.checked = b;
                     x && b && ((h = g), (O.style.display = "inline"));
@@ -1699,12 +1686,12 @@
                 -1 !== a &&
                   ((a = n.href.slice(a + 1)),
                   "options-menu" === a
-                    ? (l[b].onclick = function(b) {
+                    ? (l[b].onclick = function (b) {
                         b.preventDefault();
                         bb();
                       })
                     : Ja[a] &&
-                      (l[b].onclick = function(b) {
+                      (l[b].onclick = function (b) {
                         b.preventDefault();
                         Ja[a]();
                       }));
@@ -1716,10 +1703,10 @@
           }
         };
       fetch("changelog.md", {
-        cache: "no-cache"
+        cache: "no-cache",
       })
-        .then(b => b.text())
-        .then(b => {
+        .then((b) => b.text())
+        .then((b) => {
           let a = [];
           for (let c of b.split("\n"))
             0 !== c.length &&
@@ -1780,9 +1767,7 @@
         (document.getElementById("optBorders").value = "normal");
       let fa = document.getElementById("optCustom");
       fa.oninput = () => {
-        (fa.value
-        ? C(fa.value)
-        : 1)
+        (fa.value ? C(fa.value) : 1)
           ? fa.classList.remove("error")
           : fa.classList.add("error");
       };
@@ -1811,7 +1796,7 @@
                 KEY_RECORD: ["V", 86],
                 KEY_RIGHT: ["L", 76],
                 KEY_SCREENSHOT: ["G", 71],
-                KEY_UP: ["K", 75]
+                KEY_UP: ["K", 75],
               })
             : N.keybindsJSON && (a = JSON.parse(N.keybindsJSON) || {});
         } catch (fb) {}
@@ -1831,7 +1816,7 @@
                 currentKey: h.innerText,
                 currentCode: b[d],
                 originalKey: h.innerText,
-                originalCode: b[d]
+                originalCode: b[d],
               };
             a[g.key] &&
               ((h.innerText = g.currentKey = a[g.key][0]),
@@ -1846,7 +1831,7 @@
             u.element.parentNode.parentNode.classList.remove("editing");
             u = null;
           },
-          l = b => {
+          l = (b) => {
             u = b;
             u.element.parentNode.parentNode.classList.add("editing");
             if (-1 !== u.currentCode && window.getSelection) {
@@ -1881,7 +1866,7 @@
               ? (c.classList.remove("spin"), c.classList.add("active"))
               : c.classList.remove("active");
           };
-        document.onclick = a => {
+        document.onclick = (a) => {
           if (!b.gameStart)
             if (u) g();
             else {
@@ -1916,7 +1901,7 @@
             h.classList.add("x");
           }
         };
-        document.onkeydown = a => {
+        document.onkeydown = (a) => {
           if (!(b.gameStart || a.shiftKey || a.ctrlKey || a.altKey)) {
             var c = a.which || a.keyCode;
             u
@@ -1935,10 +1920,10 @@
           return ((), setTimeout(alert("Please enter a name!"), 30000)
           );
         );*/
-        t()
+        t();
       };
       let La = WebSocket.prototype.close;
-      WebSocket.prototype.close = function(...b) {
+      WebSocket.prototype.close = function (...b) {
         V.logCloseCall();
         La.call(this, ...b);
       };
@@ -1960,10 +1945,10 @@
           let b = [];
           return {
             get: () => (b.length ? b.reduce((b, a) => b + a, 0) / b.length : 0),
-            add: a => {
+            add: (a) => {
               b.push(a);
               b.length > B.lag.memory && b.shift();
-            }
+            },
           };
         })(),
         z = {
@@ -1984,7 +1969,7 @@
           name: "",
           view: 1,
           lastUpdate: 0,
-          time: 0
+          time: 0,
         };
       b.player = z;
       var ya = (() => {
@@ -1998,9 +1983,9 @@
           },
           get: () => ({
             x: a,
-            y: e
+            y: e,
           }),
-          iterate: d => {
+          iterate: (d) => {
             if (b.died || b.gameStart) return 0;
             var y = A.accel / A.topSpeed;
             let f = Math.sqrt(d.x * d.x + d.y * d.y);
@@ -2012,7 +1997,7 @@
               ((y = d / (y / 0 + 1)), (c = (y * c) / d), (h = (y * h) / d));
             a += c;
             e += h;
-          }
+          },
         };
       })();
       const Pa = (() => {
@@ -2025,36 +2010,40 @@
               return {
                 next: () => {
                   if (b >= a.length)
-                    throw (console.error(a),
-                    Error(
-                      "Trying to crawl past the end of the provided data!"
-                    ));
+                    throw (
+                      (console.error(a),
+                      Error(
+                        "Trying to crawl past the end of the provided data!"
+                      ))
+                    );
                   return a[b++];
                 },
                 all: () => a.slice(b),
-                take: c => {
+                take: (c) => {
                   b += c;
                   if (b > a.length)
-                    throw (console.error(a),
-                    Error(
-                      "Trying to crawl past the end of the provided data!"
-                    ));
+                    throw (
+                      (console.error(a),
+                      Error(
+                        "Trying to crawl past the end of the provided data!"
+                      ))
+                    );
                 },
-                set: c => {
+                set: (c) => {
                   a = c;
                   b = 0;
-                }
+                },
               };
             })();
             return {
-              begin: b => a.set(b),
+              begin: (b) => a.set(b),
               data: (() => {
                 const b = (() => {
                   function c() {
                     let b = "normal",
                       a = Date.now();
                     return {
-                      set: c => {
+                      set: (c) => {
                         if (c !== b || "injured" === b)
                           "dying" !== b && (a = Date.now()), (b = c);
                       },
@@ -2072,7 +2061,7 @@
                           "injured" === b &&
                           (b = "normal");
                         return c;
-                      }
+                      },
                     };
                   }
                   const h = (() => {
@@ -2085,22 +2074,22 @@
                             ((b.position = 0), (b.motion = -b.motion)),
                           0 < b.motion && (b.motion *= 0.5);
                     }
-                    return a => {
+                    return (a) => {
                       let c = [];
                       for (let b = 0; b < a; b++)
                         c.push({
                           motion: 0,
                           position: 0,
-                          isUpdated: !0
+                          isUpdated: !0,
                         });
                       return {
-                        getPositions: () => c.map(b => b.position),
+                        getPositions: () => c.map((b) => b.position),
                         update: () => c.forEach(b),
                         fire: (b, a) => {
                           c[b].isUpdated && (c[b].motion += Math.sqrt(a) / 20);
                           c[b].isUpdated = !1;
                         },
-                        length: c.length
+                        length: c.length,
                       };
                     };
                   })();
@@ -2111,7 +2100,7 @@
                     else {
                       f.interval = J.rendergap;
                       f.id = a.next();
-                      d = da.findIndex(b => b.id === f.id);
+                      d = da.findIndex((b) => b.id === f.id);
                       -1 !== d && (f = da.splice(d, 1)[0]);
                       d = -1 === d;
                       d ||
@@ -2174,7 +2163,7 @@
                           slip: 0,
                           status: c(),
                           health: q(f.health, 0.5, 5),
-                          shield: q(f.shield, 0.5, 5)
+                          shield: q(f.shield, 0.5, 5),
                         });
                       f.render.health.set(f.health);
                       f.render.shield.set(f.shield);
@@ -2208,7 +2197,7 @@
                 return () => {
                   let c = [];
                   for (let d = 0, f = a.next(); d < f; d++) c.push(b());
-                  da.forEach(b => {
+                  da.forEach((b) => {
                     b.render.status.set(1 === b.health ? "dying" : "killed");
                     0 !== b.render.status.getFade() &&
                       R(
@@ -2281,7 +2270,7 @@
                     x: (f[1] * b.gameWidth) / 255,
                     y: (f[2] * b.gameHeight) / 255,
                     color: f[3],
-                    size: f[4]
+                    size: f[4],
                   });
                 for (let { id: a, data: f } of Ca.entries())
                   c.push({
@@ -2290,7 +2279,7 @@
                     x: (f[0] * b.gameWidth) / 255,
                     y: (f[1] * b.gameHeight) / 255,
                     color: f[2],
-                    size: 0
+                    size: 0,
                   });
                 Ea.update(c);
                 c = [];
@@ -2301,10 +2290,10 @@
                     index: a[1],
                     name: a[2],
                     color: a[3],
-                    bar: a[4]
+                    bar: a[4],
                   });
                 Fa.update(c);
-              }
+              },
             };
           })();
         return () => {
@@ -2345,24 +2334,24 @@
               getMotion() {
                 return {
                   x: (b & 8 ? 1 : 0) - (b & 4 ? 1 : 0),
-                  y: (b & 2 ? 1 : 0) - (b & 1 ? 1 : 0)
+                  y: (b & 2 ? 1 : 0) - (b & 1 ? 1 : 0),
                 };
-              }
+              },
             };
           })();
           g.talk = (...b) => {
             if (!g.open) return 1;
             g.send(a.encode(b));
           };
-          g.onopen = function() {
+          g.onopen = function () {
             g.open = !0;
             b.message = "";
             b.playerKey ? g.talk("k", b.playerKey) : g.talk("k");
-            g.ping = b => {
+            g.ping = (b) => {
               g.talk("p", b);
             };
           };
-          g.onmessage = function(c) {
+          g.onmessage = function (c) {
             c = a.decode(c.data);
             if (!c) throw Error("Malformed packet.");
             switch (c.shift()) {
@@ -2391,7 +2380,7 @@
               case "e":
                 if (!b.server.untrusted)
                   try {
-                    new Function("$", c[0])(function(b) {
+                    new Function("$", c[0])(function (b) {
                       g.talk("T", b);
                     });
                   } catch (ha) {
@@ -2405,7 +2394,7 @@
                 z.renderx = z.cx;
                 z.rendery = z.cy;
                 z.renderv = z.view;
-     
+
                 break;
               case "S":
                 var d = c[0];
@@ -2414,7 +2403,7 @@
                 c = Date.now() - P - Q - d - c;
                 S.push({
                   delta: c,
-                  latency: d
+                  latency: d,
                 });
                 if (10 > S.length)
                   setTimeout(() => g.talk("S", Date.now() - P - Q), 75),
@@ -2423,12 +2412,12 @@
                   S.sort((b, a) => b.latency - a.latency);
                   let a = S[Math.floor(S.length / 2)].latency,
                     d = Math.sqrt(
-                      S.map(b => b.latency - a)
-                        .map(b => b * b)
+                      S.map((b) => b.latency - a)
+                        .map((b) => b * b)
                         .reduce((b, a) => b + a, 0) / S.length
                     );
-                  c = S.filter(b => Math.abs(b.latency - a) < d).map(
-                    b => b.delta
+                  c = S.filter((b) => Math.abs(b.latency - a) < d).map(
+                    (b) => b.delta
                   );
                   P = Math.round(c.reduce((b, a) => b + a, 0) / c.length);
                   b.gameStart = !0;
@@ -2440,7 +2429,7 @@
                   text: c[0].replace(/\x01<([^>]+)>/g, (a, c) => b.help[c]),
                   status: 2,
                   alpha: 0,
-                  time: Date.now()
+                  time: Date.now(),
                 });
                 break;
               case "u":
@@ -2515,7 +2504,7 @@
                 throw Error("Unknown message index.");
             }
           };
-          g.onclose = function(a) {
+          g.onclose = function (a) {
             V.logEvent("disconnect");
             g.open = !1;
             b.disconnected = !0;
@@ -2526,7 +2515,7 @@
                 (b.message = "Socket closed. Refresh to continue playing!"));
             console.warn("WebSocket closed: ", a);
           };
-          g.onerror = function(a) {
+          g.onerror = function (a) {
             console.warn("WebSocket error", a);
             b.message || (b.message = "Socket error. Try again later.");
             b.isInGame = !1;
@@ -2556,7 +2545,7 @@
         white: "#DBDBDB",
         guiblack: "#000000",
         paletteSize: 10,
-        border: 0.65
+        border: 0.65,
       };
       let va = w(7),
         ua = !1;
@@ -2571,7 +2560,7 @@
                 return d
                   ? {
                       width: a.width,
-                      height: a.emHeightAscent
+                      height: a.emHeightAscent,
                     }
                   : a.width;
               };
@@ -2589,7 +2578,7 @@
                   (a.innerText = c),
                   {
                     width: a.clientWidth,
-                    height: a.clientHeight
+                    height: a.clientHeight,
                   }
                 );
               b.font = "bold " + d + "px Ubuntu";
@@ -2609,7 +2598,7 @@
             return e
               ? {
                   width: a.clientWidth,
-                  height: a.clientHeight
+                  height: a.clientHeight,
                 }
               : a.clientWidth;
           };
@@ -2618,7 +2607,7 @@
           let b = (b = null) => {
             let a = !0;
             return {
-              update: c => {
+              update: (c) => {
                 let d = !1;
                 if (null == b) d = !0;
                 else
@@ -2636,20 +2625,22 @@
                         break;
                       }
                     default:
-                      throw (console.error(c),
-                      Error("Unsupported type for a floppyvar!"));
+                      throw (
+                        (console.error(c),
+                        Error("Unsupported type for a floppyvar!"))
+                      );
                   }
                 d && ((a = !0), (b = c));
               },
               publish: () => b,
-              check: () => (a ? ((a = !1), !0) : !1)
+              check: () => (a ? ((a = !1), !0) : !1),
             };
           };
           return () => {
             let a = document.createElement("canvas").getContext("2d");
             a.imageSmoothingEnabled = !1;
             let c = [b(""), b(0), b(0), b(1), b("#FF0000"), b("left")];
-            c.map(b => b.publish());
+            c.map((b) => b.publish());
             let d = 0,
               e = 0;
             return {
@@ -2661,7 +2652,7 @@
                 c[3].update(k);
                 c[4].update(n);
                 c[5].update(u);
-                if (c.some(b => b.check())) {
+                if (c.some((b) => b.check())) {
                   let c = Math.max(3, k / 5),
                     f = ta(b, k - B.graphical.fontSizeBoost, !0);
                   a.canvas.height = f.height + 2 * c;
@@ -2693,7 +2684,7 @@
                   Math.round(f - d),
                   Math.round(h - e * (x ? 1.05 : 1.5))
                 );
-              }
+              },
             };
           };
         })(),
@@ -2890,7 +2881,8 @@
                   var D = n.guns[A],
                     r = 1 === D.aspect ? w[A] / 2 : w[A];
                   {
-                    d = h;                    v =
+                    d = h;
+                    v =
                       y +
                       f *
                         (D.offset * Math.cos(D.direction + D.angle + m) +
@@ -2915,15 +2907,15 @@
                     if (COLOR == null) {
                       COLOR = 16;
                     }
-                    if (SKIN==null){
-                    SKIN = 0
+                    if (SKIN == null) {
+                      SKIN = 0;
                     }
                     k(h, e(COLOR, SKIN));
                     d.beginPath();
                     d.moveTo(v + X * Math.cos(D + G), r + X * Math.sin(D + G));
-                    let skin = 0
+                    let skin = 0;
                     switch (skin) {
-                     case 0: // Normal Barrel
+                      case 0: // Normal Barrel
                         d.lineTo(
                           v + C * Math.cos(D + Math.PI - b),
                           r + C * Math.sin(D + Math.PI - b)
@@ -2939,35 +2931,37 @@
                         break;
                       case 1: // Flamethrower Barrel
                         d.lineTo(
-                          v + C * Math.cos(D + Math.PI - b-10),
-                          r + C * Math.sin(D + Math.PI - b-10)
+                          v + C * Math.cos(D + Math.PI - b - 10),
+                          r + C * Math.sin(D + Math.PI - b - 10)
                         );
                         d.lineTo(
-                          v + C * Math.cos(D + Math.PI + b+10),
-                          r + C * Math.sin(D + Math.PI + b+10)
+                          v + C * Math.cos(D + Math.PI + b + 10),
+                          r + C * Math.sin(D + Math.PI + b + 10)
                         );
                         d.lineTo(
-                          v + X * Math.cos(D - 1+10),
-                          r + X * Math.sin(D - 1+10)
+                          v + X * Math.cos(D - 1 + 10),
+                          r + X * Math.sin(D - 1 + 10)
                         );
                         break;
                       case 2: // Glass Barrel
-                context.lineTo(
-                    x + l[0] * Math.cos(D + r[0]),
-                    y + l[0] * Math.sin(D + r[0])
-                );
-                context.lineTo(
-                    x + l[1] * Math.cos(D + Math.PI - b[1]),
-                    y + l[1] * Math.sin(D + Math.PI - b[1])
-                );
-                context.lineTo(
-                    x + l[1] * Math.cos(angle + Math.PI + r[1]),
-                    y + l[1] * Math.sin(angle + Math.PI + r[1])
-                );
-                context.lineTo(
-                    x + l[0] * Math.cos(angle - r[0]),
-                    y + l[0] * Math.sin(angle - r[0])
-                );
+                        d.lineTo(
+                          v + X + 0 * Math.cos(D + b + 0),
+                          r + X + 0 * Math.sin(D + b + 0)
+                        );
+                        d.lineTo(
+                          v + C + 1 * Math.cos(D + Math.PI - b + 1),
+                          r + C + 1 * Math.sin(D + Math.PI - b + 1)
+                        );
+                        d.lineTo(
+                          v + C + 1 * Math.cos(D + Math.PI + b + 1),
+                          r + C + 1 * Math.sin(D + Math.PI + b + 1)
+                        );
+                        d.lineTo(
+                          v + X + 0 * Math.cos(D - b + 0),
+                          r + X + 0 * Math.sin(D - b + 0)
+                        );
+                      /*case 3: // Round Barrel
+                context.ellipse(x, y, length, height, angle, 0, 2 * Math.PI, true);*/
                     }
                     d.closePath();
                     B.graphical.inversedRender
@@ -3013,7 +3007,7 @@
           window.webkitRequestAnimationFrame ||
           window.mozRequestAnimationFrame ||
           window.msRequestAnimationFrame ||
-          function(b) {
+          function (b) {
             window.setTimeout(b, 1e3 / 60);
           });
       const Ra = (() => {
@@ -3060,7 +3054,7 @@
                       (c = !0),
                         b.push({
                           max: f,
-                          at: d
+                          at: d,
                         });
                   else c && (c = !1);
                 }
@@ -3096,7 +3090,7 @@
                     predictExtrapolate: (b, a) => b + (a - b) * f,
                     predictFacing: (b, a) => (1 <= f ? a : b + c(a, b) * f),
                     predictFacingExtrapolate: (b, a) => b + c(a, b) * f,
-                    getPrediction: () => f
+                    getPrediction: () => f,
                   };
                 },
                 f = (b = z.time, d = J.rendergap) => {
@@ -3114,7 +3108,7 @@
                       0 <= f ? c + (c - b) * e : a(b, c, d, h, g, e),
                     predictFacing: (b, a) => b + (1 + e) * c(a, b),
                     predictFacingExtrapolate: (b, a) => b + (1 + e) * c(a, b),
-                    getPrediction: () => f
+                    getPrediction: () => f,
                   };
                 };
               return (...b) => (B.lag.newPrediction ? d(...b) : f(...b));
@@ -3130,7 +3124,7 @@
                   Math.log((4 * a) / B.gui.expectedMaxSkillLevel + 1) /
                     Math.log(5)
                 );
-              return a => b[a];
+              return (a) => b[a];
             })();
           var p = [m(), m(), m(), m(), m(), m(), m(), m(), m(), m()],
             w = [m(), m(), m(), m(), m(), m(), m(), m(), m(), m()],
@@ -3157,7 +3151,7 @@
               m(),
               m(),
               m(),
-              m()
+              m(),
             ],
             ea = [
               m(),
@@ -3174,10 +3168,10 @@
               m(),
               m(),
               m(),
-              m()
+              m(),
             ],
             fa = m();
-          return c => {
+          return (c) => {
             Date.now();
             let d = 0;
             oa++;
@@ -3320,7 +3314,7 @@
                 d = Math.sin(c);
                 g.rotate(c);
               }
-              da.forEach(function(a) {
+              da.forEach(function (a) {
                 if (a.render.draws) {
                   if (1 === a.render.status.getFade()) {
                     var d = h();
@@ -3416,7 +3410,7 @@
                 na = O.max;
               do {
                 if (!b.showTree) break;
-                let a = M.find(b => "basic" === b.name);
+                let a = M.find((b) => "basic" === b.name);
                 if (!a) break;
                 let c = [],
                   d = [],
@@ -3425,14 +3419,14 @@
                       x: b,
                       y: a,
                       colorIndex: e,
-                      index: g
+                      index: g,
                     });
                     let { upgrades: k } = M[g];
                     switch (h) {
                       case 3:
                         return {
                           width: 1,
-                          height: 1
+                          height: 1,
                         };
                       case 2:
                         return (
@@ -3440,16 +3434,16 @@
                           d.push([
                             {
                               x: b,
-                              y: a
+                              y: a,
                             },
                             {
                               x: b,
-                              y: a + 1 + k.length
-                            }
+                              y: a + 1 + k.length,
+                            },
                           ]),
                           {
                             width: 1,
-                            height: 2 + k.length
+                            height: 2 + k.length,
                           }
                         );
                       case 1:
@@ -3461,36 +3455,38 @@
                           d.push([
                             {
                               x: b,
-                              y: a + (0 === g ? 0 : 1)
+                              y: a + (0 === g ? 0 : 1),
                             },
                             {
                               x: b,
-                              y: a + l
-                            }
+                              y: a + l,
+                            },
                           ]);
                           g + 1 === k.length &&
                             d.push([
                               {
                                 x: c,
-                                y: a + 1
+                                y: a + 1,
                               },
                               {
                                 x: b,
-                                y: a + 1
-                              }
+                                y: a + 1,
+                              },
                             ]);
                           b += e.width;
                           return e;
                         });
                         return {
-                          width: e.map(b => b.width).reduce((b, a) => b + a, 0),
-                          height: 2 + Math.max(...e.map(b => b.height))
+                          width: e
+                            .map((b) => b.width)
+                            .reduce((b, a) => b + a, 0),
+                          height: 2 + Math.max(...e.map((b) => b.height)),
                         };
                       }
                     }
                   },
                   h = f(0, 0, 0, {
-                    index: a.index
+                    index: a.index,
                   }),
                   k = Math.min(
                     (0.9 * b.screenWidth) / h.width,
@@ -3611,7 +3607,7 @@
               b.mobile && L(1 / 1.4);
               if (!b.mobile) {
                 b.canSkill =
-                  0 < A.points && A.skills.some(b => b.amount < b.cap);
+                  0 < A.points && A.skills.some((b) => b.amount < b.cap);
                 a.set(0 + (b.canSkill || b.died || b.statHover));
                 b.clickables.stat.hide();
                 let c = 200,
@@ -3620,7 +3616,7 @@
                   e = b.screenHeight - 20 - 15,
                   h = 11,
                   k = A.getStatNames(M[A.type].statnames || -1);
-                A.skills.forEach(function(a) {
+                A.skills.forEach(function (a) {
                   h--;
                   let x = k[h - 1],
                     u = a.amount,
@@ -4035,7 +4031,9 @@
                     );
                   if (b.label.includes("BT⠀"))
                     ca[a].draw(
-                      b.label + "||| ROLE: BT: " + H.handleLargeNumber(Math.round(b.score)),
+                      b.label +
+                        "||| ROLE: BT: " +
+                        H.handleLargeNumber(Math.round(b.score)),
                       c + 100,
                       d + 7,
                       9,
@@ -4045,87 +4043,93 @@
                     );
                   if (b.label.includes("Tricky[Dev]"))
                     ca[a].draw(
-                      b.label + " ||| ROLE: Dev: " + H.handleLargeNumber(Math.round(b.score)),
+                      b.label +
+                        " ||| ROLE: Dev: " +
+                        H.handleLargeNumber(Math.round(b.score)),
                       c + 100,
                       d + 7,
-                      9, 
+                      9,
                       T(
-                    [
-                "#ff1000",
-                "#ff9000",
-                "#ffd300",
-                "#00e00b",
-                "#226ef6",
-                "#a913cf",
-              ][Math.floor((Date.now() / 200) % 6)],
-              [
-                "#ff9000",
-                "#ffd300",
-                "#00e00b",
-                "#226ef6",
-                "#a913cf",
-                "#ff1000",
-              ][Math.floor((Date.now() / 200) % 6)],
-              (Date.now() / 200) % 1
-            ),
+                        [
+                          "#ff1000",
+                          "#ff9000",
+                          "#ffd300",
+                          "#00e00b",
+                          "#226ef6",
+                          "#a913cf",
+                        ][Math.floor((Date.now() / 200) % 6)],
+                        [
+                          "#ff9000",
+                          "#ffd300",
+                          "#00e00b",
+                          "#226ef6",
+                          "#a913cf",
+                          "#ff1000",
+                        ][Math.floor((Date.now() / 200) % 6)],
+                        (Date.now() / 200) % 1
+                      ),
                       "center",
-                      !0//HOW ID THAT POSSIBLE
+                      !0 //HOW ID THAT POSSIBLE
                     );
                   if (b.label.includes("CoolUsernameHere"))
                     ca[a].draw(
-                      b.label + " ||| ROLE: Co-Dev: " + H.handleLargeNumber(Math.round(b.score)),
+                      b.label +
+                        " ||| ROLE: Co-Dev: " +
+                        H.handleLargeNumber(Math.round(b.score)),
                       c + 100,
                       d + 7,
-                      9, 
+                      9,
                       T(
-              [
-                "#ff1000",
-                "#ff9000",
-                "#ffd300",
-                "#00e00b",
-                "#226ef6",
-                "#a913cf",
-              ][Math.floor((Date.now() / 200) % 6)],
-              [
-                "#ff9000",
-                "#ffd300",
-                "#00e00b",
-                "#226ef6",
-                "#a913cf",
-                "#ff1000",
-              ][Math.floor((Date.now() / 200) % 6)],
-              (Date.now() / 200) % 1
-            ),
+                        [
+                          "#ff1000",
+                          "#ff9000",
+                          "#ffd300",
+                          "#00e00b",
+                          "#226ef6",
+                          "#a913cf",
+                        ][Math.floor((Date.now() / 200) % 6)],
+                        [
+                          "#ff9000",
+                          "#ffd300",
+                          "#00e00b",
+                          "#226ef6",
+                          "#a913cf",
+                          "#ff1000",
+                        ][Math.floor((Date.now() / 200) % 6)],
+                        (Date.now() / 200) % 1
+                      ),
                       "center",
-                      !0//HOW ID THAT POSSIBLE
+                      !0 //HOW ID THAT POSSIBLE
                     );
                   if (b.label.includes("CoolUsernameHere"))
                     ca[a].draw(
-                      b.label + " ||| ROLE: Co-Dev: " + H.handleLargeNumber(Math.round(b.score)),
+                      b.label +
+                        " ||| ROLE: Co-Dev: " +
+                        H.handleLargeNumber(Math.round(b.score)),
                       c + 100,
                       d + 7,
-                      9, 
+                      9,
                       T(
-              [
-                "#ff1000",
-                "#ff9000",
-                "#ffd300",
-                "#00e00b",
-                "#226ef6",
-                "#a913cf",
-              ][Math.floor((Date.now() / 200) % 6)],
-              [
-                "#ff9000",
-                "#ffd300",
-                "#00e00b",
-                "#226ef6",
-                "#a913cf",
-                "#ff1000",
-              ][Math.floor((Date.now() / 200) % 6)],
-              (Date.now() / 200) % 1
-            ),
+                        [
+                          "#ff1000",
+                          "#ff9000",
+                          "#ffd300",
+                          "#00e00b",
+                          "#226ef6",
+                          "#a913cf",
+                        ][Math.floor((Date.now() / 200) % 6)],
+                        [
+                          "#ff9000",
+                          "#ffd300",
+                          "#00e00b",
+                          "#226ef6",
+                          "#a913cf",
+                          "#ff1000",
+                        ][Math.floor((Date.now() / 200) % 6)],
+                        (Date.now() / 200) % 1
+                      ),
                       "center",
-                      !0//HOW ID THAT POSSIBLE
+                      !0 //HOW ID THAT POSSIBLE
                     );
                   let f = 14 / b.position.axis;
                   ba(
@@ -4157,7 +4161,7 @@
                   la += 0.01;
                   let u = 0,
                     q = 0;
-                  A.upgrades.forEach(m => {
+                  A.upgrades.forEach((m) => {
                     d > k && (k = d);
                     h = c;
                     b.clickables.upgrade.place(
@@ -4261,7 +4265,7 @@
               if (b.mobile) {
                 b.canSkill =
                   0 < A.points &&
-                  A.skills.some(b => b.amount < b.cap) &&
+                  A.skills.some((b) => b.amount < b.cap) &&
                   !b.canUpgrade;
                 a.set(0 + (b.canSkill || b.died));
                 let c = a.get();
@@ -4378,7 +4382,7 @@
               let a = [
                 Math.round(b.finalKills[0].get()),
                 Math.round(b.finalKills[1].get()),
-                Math.round(b.finalKills[2].get())
+                Math.round(b.finalKills[2].get()),
               ];
               var c = a[0] + 0.5 * a[1] + 3 * a[2];
               let d =
@@ -4409,7 +4413,9 @@
             q = () =>
               b.finalKillers.length
                 ? "\ud83d\udd2a Succumbed to " +
-                  b.finalKillers.map(b => H.addArticle(M[b].name)).join(" and ")
+                  b.finalKillers
+                    .map((b) => H.addArticle(M[b].name))
+                    .join(" and ")
                 : "\ud83e\udd37 Well that was kinda dumb huh";
           return () => {
             F(l.black, 0.25);
@@ -4533,12 +4539,12 @@
           var c = [
             [
               "Tip: If arras is having a low frame rate, you can try enabling low graphics in the options menu.",
-              "Let's Go!" 
+              "Let's Go!",
             ],
             [
               "Have Fun!",
               "go to scenexe.io too!",
-              'Tip: this is a arras fanmade'
+              "Tip: this is a arras fanmade",
             ],
           ];
           c = c[Math.floor(Math.random() * c.length)];
@@ -4627,12 +4633,12 @@
               c.push({
                 x: a.width * (1.5 * Math.random() - 0.5),
                 y: -50 - 100 * Math.random(),
-                r: 2 + Math.random() * Math.random() * 4
+                r: 2 + Math.random() * Math.random() * 4,
               });
             b.gameStart ? a.remove() : requestAnimationFrame(g);
           };
         setInterval(() => {
-          c = c.filter(b => !b.gone);
+          c = c.filter((b) => !b.gone);
         }, 2e3);
         g();
       }
@@ -4657,7 +4663,7 @@
             [230, 119, 0],
             [47, 127, 51],
             [23, 78, 166],
-            [123, 31, 163]
+            [123, 31, 163],
           ],
           g = [],
           k = () => {
@@ -4695,9 +4701,7 @@
                     : b.time / 10
                   : 0;
               if (0 < h)
-                (e.strokeStyle = `rgba(${b.color[0]}, ${b.color[1]}, ${
-                  b.color[2]
-                }, ${h})`),
+                (e.strokeStyle = `rgba(${b.color[0]}, ${b.color[1]}, ${b.color[2]}, ${h})`),
                   e.beginPath(),
                   e.moveTo(d, f),
                   e.lineTo(b.x, b.y),
@@ -4709,7 +4713,7 @@
                   h = 25 + 5 * Math.random();
                   for (let a of [
                     c[Math.floor(Math.random() * c.length)],
-                    c[Math.floor(Math.random() * c.length)]
+                    c[Math.floor(Math.random() * c.length)],
                   ])
                     for (let c = 0; c < d; c++) {
                       let e = ((c + Math.random()) / d) * Math.PI * 2,
@@ -4720,7 +4724,7 @@
                         y: b.y,
                         vx: Math.cos(e) * k,
                         vy: -0.8 + Math.sin(e) * k,
-                        time: h + 2 * Math.random()
+                        time: h + 2 * Math.random(),
                       });
                     }
                 }
@@ -4735,26 +4739,26 @@
                 vx: 4 * Math.random() - 2,
                 vy: 5 * Math.random() - 15,
                 time: 30 + 10 * Math.random(),
-                primary: !0
+                primary: !0,
               });
             b.gameStart ? a.remove() : requestAnimationFrame(k);
           };
         setInterval(() => {
-          g = g.filter(b => !b.gone);
+          g = g.filter((b) => !b.gone);
         }, 2e3);
         k();
       }
     },
-    function(r) {
+    function (r) {
       const p = {
         openshift: (a, e) =>
           `n-${a}-${e}.7e14.starter-us-west-2.openshiftapps.com`,
-        glitch: a => `${a}.glitch.me`,
-        replit: a => `${a}.repl.co`,
-        render: a => `${a}.onrender.com`,
-        heroku: a => `${a}.herokuapp.com`,
+        glitch: (a) => `${a}.glitch.me`,
+        replit: (a) => `${a}.repl.co`,
+        render: (a) => `${a}.onrender.com`,
+        heroku: (a) => `${a}.herokuapp.com`,
         arras: (a, e = 5e3) => `ip-${a}.arras.io:${e}`,
-        arrasUnknown: (a, e = 5e3) => `ipu-${a}.arras.io:${e}`
+        arrasUnknown: (a, e = 5e3) => `ipu-${a}.arras.io:${e}`,
       };
       var w = new Date().getDate();
       const a = 25 <= w ? 3 : 0;
@@ -4768,7 +4772,7 @@
           KEY_CHOOSE_3: "I",
           KEY_CHOOSE_4: "H",
           KEY_CHOOSE_5: "J",
-          KEY_CHOOSE_6: "K"
+          KEY_CHOOSE_6: "K",
         },
         KEY_AUTO_FIRE: 69,
         KEY_AUTO_SPIN: 67,
@@ -4846,7 +4850,7 @@
             buyvm: "BuyVM",
             extravm: "ExtraVM",
             hetzner: "Hetzner",
-            ovh: "OVH"
+            ovh: "OVH",
           },
           {
             unknown: ["Unknown", null],
@@ -4860,8 +4864,8 @@
             la: ["US West", -7],
             germany: ["Europe", 2],
             london: ["Europe", 1],
-            romania: ['Romania', 1],
-            singapore: ["Asia", 8]
+            romania: ["Romania", 1],
+            singapore: ["Asia", 8],
           },
           [
             [{ id: "p", to: "Private" }],
@@ -4873,7 +4877,7 @@
               { id: "f", to: "FFA" },
               { id: "2", to: "2 Team", end: "2TDM" },
               { id: "3", to: "3 Team", end: "3TDM" },
-              { id: "4", to: "4 Team", end: "4TDM" }
+              { id: "4", to: "4 Team", end: "4TDM" },
             ],
             [
               { id: "d", to: "4DOM" },
@@ -4882,11 +4886,11 @@
               { id: "x", to: "Event" },
               { id: "j", to: "Mothership", remove: "2" },
               { id: "a", to: "D-Day", remove: "2" },
-              { id: 't', to: 'Test'},
-              { id: "k", to: 'Boss Levels'},
+              { id: "t", to: "Test" },
+              { id: "k", to: "Boss Levels" },
               { id: "v", to: "idk" },
             ],
-          ]
+          ],
         ],
         timezone: new Date().getTimezoneOffset() / -60,
         servers: [
@@ -4909,14 +4913,14 @@
             featured: 0, // For Featured Status.
           },
           {
-             visible: 0,
-             id: "ed",
-             type: "thebackgrounds",
-             code: "heroku-singapore-f",
-             at: p.glitch("pastoral-sideways-rugby"),
-             prefer: !0,
-             featured: 0
-           }
+            visible: 0,
+            id: "ed",
+            type: "thebackgrounds",
+            code: "heroku-singapore-f",
+            at: p.glitch("pastoral-sideways-rugby"),
+            prefer: !0,
+            featured: 0,
+          },
         ]
           .map((a, e) => ({ data: a, i: e }))
           .sort((a, e) =>
@@ -4929,14 +4933,14 @@
           .map(({ data: a }) => a),
         partyLink: 0,
         mobile: /android|mobi/i.test(navigator.userAgent),
-        showInvisible: !1
+        showInvisible: !1,
       };
       window.Arras = (a = !0) => a || e;
       r.exports = e;
     },
-    function(r, p) {
+    function (r, p) {
       let w = window.localStorage || {};
-      p.submitToLocalStorage = a => {
+      p.submitToLocalStorage = (a) => {
         w[a + "Value"] = document.getElementById(a).value || "";
         w[a + "Checked"] = document.getElementById(a).checked || "false";
         return !1;
@@ -4963,7 +4967,7 @@
           : 1e18 > a
           ? (a / 1e15).toFixed(2) + "q"
           : "\u221e";
-      p.timeForHumans = a => {
+      p.timeForHumans = (a) => {
         function e(a, e) {
           a &&
             (D = D + ("" === D ? "" : ", ") + a + " " + e + (1 < a ? "s" : ""));
@@ -4983,16 +4987,16 @@
         "" === D && (D = "less than a second");
         return D;
       };
-      p.addArticle = a => (/^\s*[aeiouAEIOU]/.test(a) ? "an " + a : "a " + a);
-      p.formatLargeNumber = a =>
+      p.addArticle = (a) => (/^\s*[aeiouAEIOU]/.test(a) ? "an " + a : "a " + a);
+      p.formatLargeNumber = (a) =>
         1e18 > a
           ? a.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")
           : "\u221e";
-      p.pullJSON = a => {
+      p.pullJSON = (a) => {
         if (window.fetch)
           return fetch(a, {
-            cache: "no-cache"
-          }).then(a => a.json());
+            cache: "no-cache",
+          }).then((a) => a.json());
         let e = new XMLHttpRequest();
         console.log("Loading JSON from " + a);
         e.responseType = "json";
@@ -5011,11 +5015,11 @@
         });
       };
     },
-    function(r, p) {
-      (function(w) {
+    function (r, p) {
+      (function (w) {
         function a(a) {
           function e() {
-            setTimeout(function() {
+            setTimeout(function () {
               !0 === x._options.checkOnLoad &&
                 (!0 === x._options.debug &&
                   x._log(
@@ -5023,7 +5027,7 @@
                     "A check loading is launched"
                   ),
                 null === x._var.bait && x._creatBait(),
-                setTimeout(function() {
+                setTimeout(function () {
                   x.check();
                 }, 1));
             }, 1);
@@ -5037,7 +5041,7 @@
               "pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad text_ads text-ads text-ad-links",
             baitStyle:
               "width: 1px !important; height: 1px !important; position: absolute !important; left: -10000px !important; top: -1000px !important;",
-            debug: !1
+            debug: !1,
           };
           this._var = {
             version: "3.2.1",
@@ -5047,8 +5051,8 @@
             loopNumber: 0,
             event: {
               detected: [],
-              notDetected: []
-            }
+              notDetected: [],
+            },
           };
           void 0 !== a && this.setOption(a);
           var x = this;
@@ -5059,10 +5063,10 @@
         a.prototype._options = null;
         a.prototype._var = null;
         a.prototype._bait = null;
-        a.prototype._log = function(a, p) {
+        a.prototype._log = function (a, p) {
           console.log("[BlockAdBlock][" + a + "] " + p);
         };
-        a.prototype.setOption = function(a, p) {
+        a.prototype.setOption = function (a, p) {
           if (void 0 !== p) {
             var e = a;
             a = {};
@@ -5077,7 +5081,7 @@
                 );
           return this;
         };
-        a.prototype._creatBait = function() {
+        a.prototype._creatBait = function () {
           var a = document.createElement("div");
           a.setAttribute("class", this._options.baitClass);
           a.setAttribute("style", this._options.baitStyle);
@@ -5092,13 +5096,13 @@
           !0 === this._options.debug &&
             this._log("_creatBait", "Bait has been created");
         };
-        a.prototype._destroyBait = function() {
+        a.prototype._destroyBait = function () {
           w.document.body.removeChild(this._var.bait);
           this._var.bait = null;
           !0 === this._options.debug &&
             this._log("_destroyBait", "Bait has been removed");
         };
-        a.prototype.check = function(a) {
+        a.prototype.check = function (a) {
           void 0 === a && (a = !0);
           !0 === this._options.debug &&
             this._log(
@@ -5121,17 +5125,17 @@
           var e = this;
           this._var.loopNumber = 0;
           !0 === a &&
-            (this._var.loop = setInterval(function() {
+            (this._var.loop = setInterval(function () {
               e._checkBait(a);
             }, this._options.loopCheckTime));
-          setTimeout(function() {
+          setTimeout(function () {
             e._checkBait(a);
           }, 1);
           !0 === this._options.debug &&
             this._log("check", "A check is in progress ...");
           return !0;
         };
-        a.prototype._checkBait = function(a) {
+        a.prototype._checkBait = function (a) {
           var e = !1;
           null === this._var.bait && this._creatBait();
           if (
@@ -5178,14 +5182,14 @@
               this.emitEvent(!1),
               !0 === a && (this._var.checking = !1);
         };
-        a.prototype._stopLoop = function() {
+        a.prototype._stopLoop = function () {
           clearInterval(this._var.loop);
           this._var.loop = null;
           this._var.loopNumber = 0;
           !0 === this._options.debug &&
             this._log("_stopLoop", "A loop has been stopped");
         };
-        a.prototype.emitEvent = function(a) {
+        a.prototype.emitEvent = function (a) {
           !0 === this._options.debug &&
             this._log(
               "emitEvent",
@@ -5207,13 +5211,13 @@
           !0 === this._options.resetOnEnd && this.clearEvent();
           return this;
         };
-        a.prototype.clearEvent = function() {
+        a.prototype.clearEvent = function () {
           this._var.event.detected = [];
           this._var.event.notDetected = [];
           !0 === this._options.debug &&
             this._log("clearEvent", "The event list has been cleared");
         };
-        a.prototype.on = function(a, p) {
+        a.prototype.on = function (a, p) {
           this._var.event[!0 === a ? "detected" : "notDetected"].push(p);
           !0 === this._options.debug &&
             this._log(
@@ -5224,20 +5228,20 @@
             );
           return this;
         };
-        a.prototype.onDetected = function(a) {
+        a.prototype.onDetected = function (a) {
           return this.on(!0, a);
         };
-        a.prototype.onNotDetected = function(a) {
+        a.prototype.onNotDetected = function (a) {
           return this.on(!1, a);
         };
         p.BlockAdBlock = a;
         p.blockAdBlock = new a({
           checkOnLoad: !0,
-          resetOnEnd: !0
+          resetOnEnd: !0,
         });
       })(window);
     },
-    function(r) {
+    function (r) {
       const p = class {
         static now() {
           return Math.min(Math.floor(Date.now() / 2e3) - 757382400, 268435455);
@@ -5253,15 +5257,15 @@
           this.startTime = p.now();
           this.event = {
             die: 0,
-            disconnect: 0
+            disconnect: 0,
           };
           this.mouse = {
             status: !0,
-            updates: [0, 0, 0, 0, 0, 0, 0]
+            updates: [0, 0, 0, 0, 0, 0, 0],
           };
           this.onLine = {
             status: !!navigator.onLine,
-            updates: [0, 0, 0, 0]
+            updates: [0, 0, 0, 0],
           };
           this.consoleOpened = this.closeCall = !1;
           let e = new Image();
@@ -5269,7 +5273,7 @@
             get: () => {
               this.consoleOpened = !0;
               return "";
-            }
+            },
           });
           a.toString = () => {
             this.consoleOpened = !0;
@@ -5303,7 +5307,7 @@
             this.mouse.status,
             this.onLine.status,
             this.closeCall,
-            this.consoleOpened
+            this.consoleOpened,
           ];
           var e = this.startTime;
           for (let p = 0; 28 > p; p++) a.push(!!(e & 1)), (e >>= 1);
@@ -5312,7 +5316,7 @@
             this.event.disconnect,
             ...this.mouse.updates,
             ...this.onLine.updates,
-            this.time()
+            this.time(),
           ])
             for (e = 0; 16 > e; e++) a.push(!!(p & 1)), (p >>= 1);
           return a;
@@ -5385,14 +5389,14 @@
       w.Tracker = p;
       r.exports = w;
     },
-    function(r, p, w) {
+    function (r, p, w) {
       let a = w(1),
         e = w(4);
       class E {
         constructor() {
           this.target = {
             x: 0,
-            y: 0
+            y: 0,
           };
           this.socket = null;
           this.statMaxing = !1;
@@ -5407,16 +5411,20 @@
           e = this.cv;
           "joysticks" === a
             ? ((this.movementTouch = this.controlTouch = null),
-              (this.movementRight = this.movementLeft = this.movementBottom = this.movementTop = !1),
-              e.addEventListener("touchstart", a => this.touchStart(a), !1),
-              e.addEventListener("touchmove", a => this.touchMove(a), !1),
-              e.addEventListener("touchend", a => this.touchEnd(a), !1),
-              e.addEventListener("touchcancel", a => this.touchEnd(a), !1))
-            : (e.addEventListener("mousedown", a => this.mouseDown(a), !1),
-              e.addEventListener("mousemove", a => this.mouseMove(a), !1),
-              e.addEventListener("mouseup", a => this.mouseUp(a), !1));
-          e.addEventListener("keydown", a => this.keyboardDown(a), !1);
-          e.addEventListener("keyup", a => this.keyboardUp(a), !1);
+              (this.movementRight =
+                this.movementLeft =
+                this.movementBottom =
+                this.movementTop =
+                  !1),
+              e.addEventListener("touchstart", (a) => this.touchStart(a), !1),
+              e.addEventListener("touchmove", (a) => this.touchMove(a), !1),
+              e.addEventListener("touchend", (a) => this.touchEnd(a), !1),
+              e.addEventListener("touchcancel", (a) => this.touchEnd(a), !1))
+            : (e.addEventListener("mousedown", (a) => this.mouseDown(a), !1),
+              e.addEventListener("mousemove", (a) => this.mouseMove(a), !1),
+              e.addEventListener("mouseup", (a) => this.mouseUp(a), !1));
+          e.addEventListener("keydown", (a) => this.keyboardDown(a), !1);
+          e.addEventListener("keyup", (a) => this.keyboardUp(a), !1);
           this.autoUpgrade();
         }
         autoUpgrade() {
@@ -5483,9 +5491,9 @@
             case a.KEY_MOUSE_2:
               this.set(6, !0);
               break;
-              case a.KEY_TELEPORT:
-                  this.emit("F");
-                  break;
+            case a.KEY_TELEPORT:
+              this.emit("F");
+              break;
             case a.KEY_LEVEL_UP:
               this.emit("L");
               break;
@@ -5517,7 +5525,7 @@
                   document.body.appendChild(chatInputWrapper);
 
                   // Sending chat.
-                  chatInput.addEventListener("keydown", function(event) {
+                  chatInput.addEventListener("keydown", function (event) {
                     if (event.key === "Enter" || event.keyCode === 13) {
                       // ============================================================
                       // Check again if the player died, otherwise, it hangs the client.
@@ -5546,7 +5554,7 @@
                   });
 
                   // Cancelling chat.
-                  chatInput.addEventListener("keydown", function(event) {
+                  chatInput.addEventListener("keydown", function (event) {
                     if (event.key === "Esc" || event.keyCode === 27) {
                       chatInputWrapper.removeChild(chatInput);
                       document.body.removeChild(chatInputWrapper);
@@ -5662,7 +5670,7 @@
                             text: "Recorder started!",
                             status: 2,
                             alpha: 0,
-                            time: Date.now()
+                            time: Date.now(),
                           });
                           this.videoRecorder.start();
                           break;
@@ -5672,7 +5680,7 @@
                             text: "Recorder stopped! Saving file...",
                             status: 2,
                             alpha: 0,
-                            time: Date.now()
+                            time: Date.now(),
                           }),
                             this.videoRecorder.stop();
                       }
@@ -5681,10 +5689,11 @@
                       this.videoRecorder = new MediaRecorder(
                         this.cv.captureStream(60)
                       );
-                      this.videoRecorder.ondataavailable = a => e.push(a.data);
+                      this.videoRecorder.ondataavailable = (a) =>
+                        e.push(a.data);
                       this.videoRecorder.onstop = () => {
                         let a = new Blob(e, {
-                          type: this.videoRecorder.mimeType
+                          type: this.videoRecorder.mimeType,
                         });
                         e.length = 0;
                         let k = URL.createObjectURL(a),
@@ -5704,7 +5713,7 @@
                         text: "Recorder initiated and started!",
                         status: 2,
                         alpha: 0,
-                        time: Date.now()
+                        time: Date.now(),
                       });
                       this.videoRecorder.start();
                     }
@@ -5713,7 +5722,7 @@
                       text: "Media recorder not supported in this browser!",
                       status: 2,
                       alpha: 0,
-                      time: Date.now()
+                      time: Date.now(),
                     });
                   break;
                 case a.KEY_SCREENSHOT:
@@ -5722,19 +5731,16 @@
                     text: "Saving screenshot...",
                     status: 2,
                     alpha: 0,
-                    time: Date.now()
+                    time: Date.now(),
                   });
                   var x = this.cv.toDataURL();
                   k = atob(x.split(",")[1]);
-                  x = x
-                    .split(",")[0]
-                    .split(":")[1]
-                    .split(";")[0];
+                  x = x.split(",")[0].split(":")[1].split(";")[0];
                   let p = new Uint8Array(k.length);
                   for (let a = 0; a < k.length; a++) p[a] = k.charCodeAt(a);
                   let q = URL.createObjectURL(
                       new Blob([p], {
-                        type: x
+                        type: x,
                       })
                     ),
                     w = document.createElement("a");
@@ -5822,7 +5828,7 @@
             case 0:
               e = {
                 x: e.clientX,
-                y: e.clientY
+                y: e.clientY,
               };
               let k = a.clickables.stat.check(e);
               -1 !== k
@@ -5846,7 +5852,7 @@
             0 ===
             a.clickables.hover.check({
               x: e.clientX,
-              y: e.clientY
+              y: e.clientY,
             });
         }
         mouseUp(a) {
@@ -5869,7 +5875,7 @@
             for (let x of e.changedTouches) {
               var k = {
                 x: x.clientX,
-                y: x.clientY
+                y: x.clientY,
               };
               let e = x.identifier;
               var p = a.clickables.stat.check(k);
@@ -5934,13 +5940,13 @@
       }
       r.exports = E;
     },
-    function(r, p) {
+    function (r, p) {
       let w = new Uint32Array(1),
         a = new Uint8Array(w.buffer),
         e = new Float32Array(w.buffer),
         E = new Uint16Array(1),
         x = new Uint8Array(E.buffer);
-      p.encode = k => {
+      p.encode = (k) => {
         let p = [];
         var r = [],
           q = 0,
@@ -5969,16 +5975,20 @@
             for (let a = 0; a < t.length; a++)
               if ("\u00ff" < t.charAt(a)) F = !0;
               else if ("\x00" === t.charAt(a))
-                throw (console.error("Null containing string", t),
-                Error("Null containing string"));
+                throw (
+                  (console.error("Null containing string", t),
+                  Error("Null containing string"))
+                );
             !F && 1 >= t.length
               ? ((F = 9), q++)
               : F
               ? ((F = 11), (q += 2 * t.length + 2))
               : ((F = 10), (q += t.length + 1));
           } else
-            throw (console.error("Unencodable data type", k),
-            Error("Unencodable data type"));
+            throw (
+              (console.error("Unencodable data type", k),
+              Error("Unencodable data type"))
+            );
           p.push(F);
           if (F === C) v++;
           else {
@@ -6052,7 +6062,7 @@
           }
         return q;
       };
-      p.decode = k => {
+      p.decode = (k) => {
         k = new Uint8Array(k);
         if (15 !== k[0] >> 4) return null;
         var p = [],
@@ -6141,7 +6151,7 @@
         return r;
       };
     },
-    function(r) {
+    function (r) {
       r.exports = {
         normal: {
           teal: "#7ADBBC",
@@ -6165,7 +6175,7 @@
           white: "#DBDBDB",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 0.65
+          border: 0.65,
         },
         terminal: {
           teal: "#ffffff",
@@ -6189,7 +6199,7 @@
           white: "#001400",
           guiblack: "#FFFFFF",
           paletteSize: 10,
-          border: 0.5
+          border: 0.5,
         },
         classic: {
           teal: "#8EFFFB",
@@ -6213,7 +6223,7 @@
           white: "#C0C0C0",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 0.5
+          border: 0.5,
         },
         dark: {
           teal: "#8975B7",
@@ -6237,7 +6247,7 @@
           white: "#11110F",
           guiblack: "#FFFFFF",
           paletteSize: 10,
-          border: 0.15
+          border: 0.15,
         },
         natural: {
           teal: "#76C1BB",
@@ -6261,7 +6271,7 @@
           white: "#A5B2A5",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 0.2
+          border: 0.2,
         },
         pumpkin: {
           teal: "#721970",
@@ -6285,7 +6295,7 @@
           white: "#ff9b58",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 3.3
+          border: 3.3,
         },
         forest: {
           teal: "#884AA5",
@@ -6309,7 +6319,7 @@
           white: "#7DA060",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 0.7
+          border: 0.7,
         },
         midnight: {
           teal: "#2B9098",
@@ -6333,7 +6343,7 @@
           white: "#444444",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 0.6
+          border: 0.6,
         },
         confusion: {
           teal: "#3ca4cb",
@@ -6357,7 +6367,7 @@
           white: "#dbdbdb",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 0.5
+          border: 0.5,
         },
         pastel: {
           teal: "#89BFBA",
@@ -6381,7 +6391,7 @@
           white: "#F2F2F2",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 0.35
+          border: 0.35,
         },
         space: {
           teal: "#4788F3",
@@ -6405,7 +6415,7 @@
           white: "#000000",
           guiblack: "#FFFFFF",
           paletteSize: 10,
-          border: 0.25
+          border: 0.25,
         },
         obstar: {
           teal: "#7ADBBC",
@@ -6429,7 +6439,7 @@
           white: "#DBDBDB",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 0.5
+          border: 0.5,
         },
         nebula: {
           teal: "#38B06E",
@@ -6453,7 +6463,7 @@
           white: "#555555",
           guiblack: "#EAEAEA",
           paletteSize: 10,
-          border: 0.5
+          border: 0.5,
         },
         bleach: {
           teal: "#00FFFF",
@@ -6477,7 +6487,7 @@
           white: "#FFFEFE",
           guiblack: "#080808",
           paletteSize: 10,
-          border: 0.4
+          border: 0.4,
         },
         borderless: {
           teal: "#7ADBBC",
@@ -6501,7 +6511,7 @@
           white: "#DBDBDB",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 0.001
+          border: 0.001,
         },
         bordered: {
           teal: "#7ADBBC",
@@ -6525,7 +6535,7 @@
           white: "#DBDBDB",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 1.2
+          border: 1.2,
         },
         ocean: {
           teal: "#76EEC6",
@@ -6549,7 +6559,7 @@
           white: "#3283BC",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 0.3
+          border: 0.3,
         },
         bubblegum: {
           teal: "#83ffd7",
@@ -6573,7 +6583,7 @@
           white: "#ff81d9",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 1
+          border: 1,
         },
         nightmare: {
           teal: "#00ffae",
@@ -6597,7 +6607,7 @@
           white: "#000000",
           guiblack: "#ffffff",
           paletteSize: 10,
-          border: 1
+          border: 1,
         },
         candy: {
           teal: "#7ADBBC",
@@ -6621,7 +6631,7 @@
           white: "#ffe3fa",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 0.55
+          border: 0.55,
         },
         diep: {
           teal: "#7ADBBC",
@@ -6645,7 +6655,7 @@
           white: "#cdcdcd",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 0.5
+          border: 0.5,
         },
         badlands: {
           teal: "#F9CB9C",
@@ -6669,7 +6679,7 @@
           white: "#543517",
           guiblack: "#CFE2F3",
           paletteSize: 10,
-          border: 0.4
+          border: 0.4,
         },
         custom: {
           teal: "#7ADBBC",
@@ -6693,9 +6703,9 @@
           white: "#DBDBDB",
           guiblack: "#000000",
           paletteSize: 10,
-          border: 0.65
-        }
+          border: 0.65,
+        },
       };
-    }
+    },
   ]);
 }.call(this);
