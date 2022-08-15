@@ -1,5 +1,5 @@
      //just some code to make the sound work
-      var clicksound = new Audio();
+      /*var clicksound = new Audio();
       clicksound.src =
         "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
       function PlaySound210() {
@@ -52,7 +52,7 @@
     "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/camera.wav";
   function PlaySound213() {
     camerasound.play();
-  }
+  }*/
 
 
 ~function() {
@@ -1480,7 +1480,6 @@
                 ? "translate(2px, -2px) rotate(45deg)"
                 : "rotate(-45deg)";
               h.innerText = b ? "close options" : "view options";
-              doSomething();
               b ? u.classList.add("slided") : u.classList.remove("slided");
               y[0].style.opacity = b ? 0 : 1;
               y[2].style.opacity = b ? 1 : 0;
@@ -1931,13 +1930,12 @@
         };
       }
       document.getElementById("startButton").onclick = () => {
-        var inputVal = document.getElementById("playerNameInput").value;
+        /*var inputVal = document.getElementById("playerNameInput").value;
         if (inputVal === "")
-          return (
-            PlaySound211(), setTimeout(alert("Please enter a name!"), 30000)
+          return ((), setTimeout(alert("Please enter a name!"), 30000)
           );
-        PlaySound210();
-        t();
+        );*/
+        t()
       };
       let La = WebSocket.prototype.close;
       WebSocket.prototype.close = function(...b) {
@@ -2526,7 +2524,6 @@
               b.died ||
                 b.message ||
                 (b.message = "Socket closed. Refresh to continue playing!"));
-            PlaySound212();
             console.warn("WebSocket closed: ", a);
           };
           g.onerror = function(a) {
@@ -2868,7 +2865,7 @@
                     let b = Math.atan2(L, C);
                     X = Math.sqrt(C * C + X * X);
                     C = Math.sqrt(C * C + L * L);
-                    var lol =
+                    /*var lol =
                       D.color != null
                         ? T(
                             e(D.color),
@@ -2876,7 +2873,26 @@
                             F.status.getBlend()
                           )
                         : T(l.grey, F.status.getColor(), F.status.getBlend());
-                    k(h, lol);
+                    k(h, lol);*/
+                    var C = f * (D.length / 2 - (1 === D.aspect ? w[A] : 0)),
+                      L = (f * D.width) / 2,
+                      COLOR = D.color,
+                      SKIN = D.skin,
+                      G = D.aspect;
+                    D = D.angle + m;
+                    var X = L;
+                    0 < G ? (X *= G) : 0 > G && (L *= -G);
+                    G = Math.atan2(X, C);
+                    let b = Math.atan2(L, C);
+                    X = Math.sqrt(C * C + X * X);
+                    C = Math.sqrt(C * C + L * L);
+                    if (COLOR == null) {
+                      COLOR = 16;
+                    }
+                    if (SKIN==null){
+                    SKIN = 0
+                    }
+                    k(h, e(COLOR, SKIN));
                     d.beginPath();
                     d.moveTo(v + X * Math.cos(D + G), r + X * Math.sin(D + G));
                     d.lineTo(
