@@ -4492,7 +4492,16 @@
             e = m();
           m();
           var c = [
-            
+            [
+              "Tip: If arras is having a low frame rate, you can try enabling low graphics in the options menu.",
+              "Let's Go!" 
+            ],
+            [
+              "Have Fun!",
+              "go to scenexe.io too!",
+              'Tip: this is a arras fanmade'
+            ],
+          ];
           c = c[Math.floor(Math.random() * c.length)];
           let g = c[Math.floor(Math.random() * c.length)];
           return () => {
@@ -4812,6 +4821,7 @@
             la: ["US West", -7],
             germany: ["Europe", 2],
             london: ["Europe", 1],
+            romania: ['Romania', 1],
             singapore: ["Asia", 8]
           },
           [
@@ -4828,73 +4838,46 @@
             ],
             [
               { id: "d", to: "4DOM" },
+              { id: "n", to: "No Food" },
+              { id: "s", to: "Siege" },
               { id: "x", to: "Event" },
-              { id: "m", to: "Mothership", remove: "2" },
-              { id: "a", to: "Assault", remove: "2" }
-            ]
+              { id: "j", to: "Mothership", remove: "2" },
+              { id: "a", to: "D-Day", remove: "2" },
+              { id: 't', to: 'Test'},
+              { id: "k", to: 'Boss Levels'},
+              { id: "v", to: "idk" },
+            ],
           ]
         ],
         timezone: new Date().getTimezoneOffset() / -60,
         servers: [
           {
             visible: 0,
-            id: "Heroku-Beta",
-            type: "beta",
-            code: "heroku-frankfurt-4",
-            at: p.heroku("arrasdotio"),
+            id: "wd",
+            type: "siege",
+            code: "glitch-worldwide-s",
+            at: p.glitch("sage-animated-backpack"),
             prefer: !0,
-            featured: 0 // For Featured Status.
+            featured: 0, // For Featured Status.
           },
           {
             visible: 0,
-            id: "Heroku-FFA",
+            id: "wd",
             type: "ffa",
-            code: "heroku-frankfurt-f",
-            at: p.heroku("arras-moe"),
+            code: "glitch-worldwide-f",
+            at: p.glitch("heavy-pouncing-voyage"),
             prefer: !0,
-            featured: 0 // For Featured Status.
+            featured: 0, // For Featured Status.
           },
           {
-            visible: 0,
-            id: "Glitch-Developer",
-            type: "dev",
-            code: "glitch-virginia-f",
-            at: p.glitch("arrasio5")
-            // featured: 1, // For Featured Status.
-          },
-          {
-            visible: 1,
-            id: "Glitch-Maze",
-            type: "maze",
-            code: "glitch-virginia-m",
-            at: p.glitch("glitter-pewter-beast")
-            // featured: 1, // For Featured Status.
-          },
-          {
-                   visible: 1,
-            id: "Glitch-Staging",
-            type: "ffa",
-            code: "glitch-virginia-a",
-            at: p.glitch("debonair-pushy-beam")
-            // featured: 1, // For Featured Status.
-          },
-          {
-            visible: 0,
-            id: "Heroku-Event",
-            type: "main",
-            code: "heroku-virginia-x",
-            at: p.heroku("arras-mayhem"),
-             featured: 1, // For Featured Status.
-          },
-          {
-
-            visible: 0,
-            id: "Repl.it-Legacy",
-            type: "legacy",
-            code: "replit-virginia-2",
-            at: p.replit("arras-mayhem-legacy.seaguli")
-            // featured: 1, // For Featured Status.
-          }
+             visible: 0,
+             id: "ed",
+             type: "thebackgrounds",
+             code: "heroku-singapore-f",
+             at: p.glitch("pastoral-sideways-rugby"),
+             prefer: !0,
+             featured: 0
+           }
         ]
           .map((a, e) => ({ data: a, i: e }))
           .sort((a, e) =>
