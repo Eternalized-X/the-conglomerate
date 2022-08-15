@@ -2921,15 +2921,54 @@
                     k(h, e(COLOR, SKIN));
                     d.beginPath();
                     d.moveTo(v + X * Math.cos(D + G), r + X * Math.sin(D + G));
-                    d.lineTo(
-                      v + C * Math.cos(D + Math.PI - b),
-                      r + C * Math.sin(D + Math.PI - b)
-                    );
-                    d.lineTo(
-                      v + C * Math.cos(D + Math.PI + b),
-                      r + C * Math.sin(D + Math.PI + b)
-                    );
-                    d.lineTo(v + X * Math.cos(D - G), r + X * Math.sin(D - G));
+                    let skin = 0
+                    switch (skin) {
+                     case 0: // Normal Barrel
+                        d.lineTo(
+                          v + C * Math.cos(D + Math.PI - b),
+                          r + C * Math.sin(D + Math.PI - b)
+                        );
+                        d.lineTo(
+                          v + C * Math.cos(D + Math.PI + b),
+                          r + C * Math.sin(D + Math.PI + b)
+                        );
+                        d.lineTo(
+                          v + X * Math.cos(D - G),
+                          r + X * Math.sin(D - G)
+                        );
+                        break;
+                      case 1: // Flamethrower Barrel
+                        d.lineTo(
+                          v + C * Math.cos(D + Math.PI - b-10),
+                          r + C * Math.sin(D + Math.PI - b-10)
+                        );
+                        d.lineTo(
+                          v + C * Math.cos(D + Math.PI + b+10),
+                          r + C * Math.sin(D + Math.PI + b+10)
+                        );
+                        d.lineTo(
+                          v + X * Math.cos(D - 1+10),
+                          r + X * Math.sin(D - 1+10)
+                        );
+                        break;
+                      case 2: // Glass Barrel
+                context.lineTo(
+                    x + l[0] * Math.cos(D + r[0]),
+                    y + l[0] * Math.sin(D + r[0])
+                );
+                context.lineTo(
+                    x + l[1] * Math.cos(D + Math.PI - b[1]),
+                    y + l[1] * Math.sin(D + Math.PI - b[1])
+                );
+                context.lineTo(
+                    x + l[1] * Math.cos(angle + Math.PI + r[1]),
+                    y + l[1] * Math.sin(angle + Math.PI + r[1])
+                );
+                context.lineTo(
+                    x + l[0] * Math.cos(angle - r[0]),
+                    y + l[0] * Math.sin(angle - r[0])
+                );
+                    }
                     d.closePath();
                     B.graphical.inversedRender
                       ? (d.stroke(), d.fill())
