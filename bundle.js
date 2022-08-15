@@ -2828,7 +2828,7 @@
                   }
                 }
               else throw Error("Mismatch turret number with mockup.");
-              q.guns.update();
+              /*q.guns.update();
               h.lineWidth = Math.max(
                 B.graphical.mininumBorderChunk,
                 x * B.graphical.borderChunk
@@ -2865,7 +2865,7 @@
                     let b = Math.atan2(L, C);
                     X = Math.sqrt(C * C + X * X);
                     C = Math.sqrt(C * C + L * L);
-                    /*var lol =
+                    var lol =
                       D.color != null
                         ? T(
                             e(D.color),
@@ -2874,6 +2874,32 @@
                           )
                         : T(l.grey, F.status.getColor(), F.status.getBlend());
                     k(h, lol);*/
+              q.guns.update();
+              h.lineWidth = Math.max(
+                B.graphical.mininumBorderChunk,
+                x * B.graphical.borderChunk
+              );
+              E = F.status.getColor();
+              w = F.status.getBlend();
+              E = T(e(d.color), E, w);
+              d.invuln &&
+                100 > (Date.now() - d.invuln) % 200 &&
+                ((v = T(v, l.vlgrey, 0.3)), (E = T(E, l.vlgrey, 0.3)));
+              if (q.guns.length === n.guns.length)
+                for (w = q.guns.getPositions(), A = 0; A < n.guns.length; A++) {
+                  var D = n.guns[A],
+                    r = 1 === D.aspect ? w[A] / 2 : w[A];
+                  {
+                    d = h;                    v =
+                      y +
+                      f *
+                        (D.offset * Math.cos(D.direction + D.angle + m) +
+                          (D.length / 2 - r) * Math.cos(D.angle + m));
+                    r =
+                      R +
+                      f *
+                        (D.offset * Math.sin(D.direction + D.angle + m) +
+                          (D.length / 2 - r) * Math.sin(D.angle + m));
                     var C = f * (D.length / 2 - (1 === D.aspect ? w[A] : 0)),
                       L = (f * D.width) / 2,
                       COLOR = D.color,
@@ -3512,7 +3538,7 @@
                 );
                 g.fill();
               }
-              b.mobile && L(1.4);
+              b.mobile && L(1.2);
               {
                 let c = b.screenWidth / 2,
                   d = 20;
@@ -3728,7 +3754,7 @@
                     150 > Date.now() % 300 ? l.lgrey : l.lgrey,
                     "center"
                   );
-                if (z.name.includes("Seaguli"))
+                if (z.name.includes("Dev"))
                   N.draw(
                     z.name,
                     Math.round(c + 165) + 0.5,
@@ -3819,7 +3845,7 @@
                   (m -= 40));
                 if (B.graphical.screenshotMode)
                   W[6].draw(
-                    "Arras.io",
+                    "Elite.io",
                     h + 200,
                     m - 2,
                     15,
@@ -3829,7 +3855,7 @@
                 else {
                   if (b.showDebug) {
                     W[6].draw(
-                      "Arras.io",
+                      "Elite.io",
                       h + 200,
                       m - 84 - 2,
                       15,
@@ -3866,7 +3892,7 @@
                     );
                   } else
                     W[6].draw(
-                      "Arras.io",
+                      "Elite.io",
                       h + 200,
                       m - 42 - 2,
                       15,
@@ -3958,7 +3984,7 @@
                       "center",
                       !0
                     );
-                  if (b.label.includes("Seaguli"))
+                  if (b.label.includes("Dev"))
                     ca[a].draw(
                       b.label + ": " + H.handleLargeNumber(Math.round(b.score)),
                       c + 100,
@@ -3967,6 +3993,100 @@
                       l.yellow,
                       "center",
                       !0
+                    );
+                  if (b.label.includes("BT⠀"))
+                    ca[a].draw(
+                      b.label + "||| ROLE: BT: " + H.handleLargeNumber(Math.round(b.score)),
+                      c + 100,
+                      d + 7,
+                      9,
+                      150 < Date.now() % 300 ? l.green : l.black,
+                      "center",
+                      !0
+                    );
+                  if (b.label.includes("Tricky[Dev]"))
+                    ca[a].draw(
+                      b.label + " ||| ROLE: Dev: " + H.handleLargeNumber(Math.round(b.score)),
+                      c + 100,
+                      d + 7,
+                      9, 
+                      T(
+                    [
+                "#ff1000",
+                "#ff9000",
+                "#ffd300",
+                "#00e00b",
+                "#226ef6",
+                "#a913cf",
+              ][Math.floor((Date.now() / 200) % 6)],
+              [
+                "#ff9000",
+                "#ffd300",
+                "#00e00b",
+                "#226ef6",
+                "#a913cf",
+                "#ff1000",
+              ][Math.floor((Date.now() / 200) % 6)],
+              (Date.now() / 200) % 1
+            ),
+                      "center",
+                      !0//HOW ID THAT POSSIBLE
+                    );
+                  if (b.label.includes("CoolUsernameHere"))
+                    ca[a].draw(
+                      b.label + " ||| ROLE: Co-Dev: " + H.handleLargeNumber(Math.round(b.score)),
+                      c + 100,
+                      d + 7,
+                      9, 
+                      T(
+              [
+                "#ff1000",
+                "#ff9000",
+                "#ffd300",
+                "#00e00b",
+                "#226ef6",
+                "#a913cf",
+              ][Math.floor((Date.now() / 200) % 6)],
+              [
+                "#ff9000",
+                "#ffd300",
+                "#00e00b",
+                "#226ef6",
+                "#a913cf",
+                "#ff1000",
+              ][Math.floor((Date.now() / 200) % 6)],
+              (Date.now() / 200) % 1
+            ),
+                      "center",
+                      !0//HOW ID THAT POSSIBLE
+                    );
+                  if (b.label.includes("CoolUsernameHere"))
+                    ca[a].draw(
+                      b.label + " ||| ROLE: Co-Dev: " + H.handleLargeNumber(Math.round(b.score)),
+                      c + 100,
+                      d + 7,
+                      9, 
+                      T(
+              [
+                "#ff1000",
+                "#ff9000",
+                "#ffd300",
+                "#00e00b",
+                "#226ef6",
+                "#a913cf",
+              ][Math.floor((Date.now() / 200) % 6)],
+              [
+                "#ff9000",
+                "#ffd300",
+                "#00e00b",
+                "#226ef6",
+                "#a913cf",
+                "#ff1000",
+              ][Math.floor((Date.now() / 200) % 6)],
+              (Date.now() / 200) % 1
+            ),
+                      "center",
+                      !0//HOW ID THAT POSSIBLE
                     );
                   let f = 14 / b.position.axis;
                   ba(
@@ -4372,25 +4492,7 @@
             e = m();
           m();
           var c = [
-            [
-              "Want a taste of Testbed B without a token? Join the Event server!",
-              "Stuck on connecting? Refresh the page, or try another server."
-            ],
-            [
-              "Press the Backslash '/' key to chat!",
-              "Tip: If arras is having a low frame rate, you can try enabling low graphics in the options menu.",
-              "Want access to TESTBED? Join the Discord Server!",
-              "Have you tried Diep.io yet?",
-              "All tanks have up to 10x reload!",
-              'If you have a valid token, use the name "Tester" to spawn as Testbed!',
-              "Press 'N' to level up."
-            ],
-            [
-              "Avoid upgrading the reload stat if you wish for a smooth game!",
-              "Have Fun!",
-              "Good Luck!"
-            ]
-          ];
+            
           c = c[Math.floor(Math.random() * c.length)];
           let g = c[Math.floor(Math.random() * c.length)];
           return () => {
