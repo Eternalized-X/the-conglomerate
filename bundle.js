@@ -2931,8 +2931,8 @@
                         d.lineJoin = ("optNoPointy") ? "round" : "round";
                         d.closePath();
                         B.graphical.inversedRender
-                      ? (d.stroke(), d.fill())
-                      : (d.fill(), d.stroke());
+                      /*? (d.stroke(), d.fill();
+                      : (d.fill(),*/ d.stroke();
                         break;
                       case 1: // Flamethrower Barrel
                         d.lineTo(
@@ -2950,8 +2950,8 @@
                         d.lineJoin = ("optNoPointy") ? "round" : "round";
                         d.closePath();
                         B.graphical.inversedRender
-                      ? (d.stroke(), d.fill())
-                      : (d.fill(), d.stroke());
+                      /*? (d.stroke(), d.fill();
+                      : (d.fill(),*/ d.stroke();
                         break;
                       case 2: // Glass Barrel
                         d.lineTo(
@@ -2969,8 +2969,8 @@
                         d.lineJoin = ("optNoPointy") ? "round" : "round";
                         d.closePath();
                         B.graphical.inversedRender
-                      ? (d.stroke(), d.fill())
-                      : (d.fill(), d.stroke());
+                      /*? (d.stroke(), d.fill();
+                      : (d.fill(),*/ d.stroke();
                         break;
                       /*case 3: // Round Barrel
                         d.ellipse(x, y, length, height, b, 0, 2 * Math.PI, true);
