@@ -2928,9 +2928,11 @@
                           v + X * Math.cos(D - G),
                           r + X * Math.sin(D - G)
                         );
-                        d.lineJoin = H.retrieveFromLocalStorage2("optNoPointy") ? "round" : "round";
+                        d.lineJoin = ("optNoPointy") ? "round" : "round";
                         d.closePath();
-                        d.stroke();
+                        B.graphical.inversedRender
+                      ? (d.stroke(), d.fill())
+                      : (d.fill(), d.stroke());
                         break;
                       case 1: // Flamethrower Barrel
                         d.lineTo(
@@ -2945,9 +2947,11 @@
                           v + X * Math.cos(D - 1 + 10),
                           r + X * Math.sin(D - 1 + 10)
                         );
-                        d.lineJoin = H.retrieveFromLocalStorage2("optNoPointy") ? "round" : "round";
+                        d.lineJoin = ("optNoPointy") ? "round" : "round";
                         d.closePath();
-                        d.stroke();
+                        B.graphical.inversedRender
+                      ? (d.stroke(), d.fill())
+                      : (d.fill(), d.stroke());
                         break;
                       case 2: // Glass Barrel
                         d.lineTo(
@@ -2962,9 +2966,11 @@
                           v + X * Math.cos(D - b + 0),
                           r + X * Math.sin(D - b + 0)
                         );
-                        d.lineJoin = H.retrieveFromLocalStorage2("optNoPointy") ? "round" : "round";
+                        d.lineJoin = ("optNoPointy") ? "round" : "round";
                         d.closePath();
-                        d.stroke();
+                        B.graphical.inversedRender
+                      ? (d.stroke(), d.fill())
+                      : (d.fill(), d.stroke());
                         break;
                       /*case 3: // Round Barrel
                         d.ellipse(x, y, length, height, b, 0, 2 * Math.PI, true);
@@ -2973,10 +2979,6 @@
                         d.stroke();
                         break;*/
                     }
-                    /*d.closePath();
-                    B.graphical.inversedRender
-                      ? (d.stroke(), d.fill())
-                      : (d.fill(), d.stroke());*/
                   }
                 }
               else throw Error("Mismatch gun number with mockup.");
