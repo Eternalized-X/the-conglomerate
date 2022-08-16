@@ -2928,6 +2928,9 @@
                           v + X * Math.cos(D - G),
                           r + X * Math.sin(D - G)
                         );
+                        context.lineJoin = config.graphical.pointy ? "round" : "round";
+                        context.closePath();
+                        context.stroke();
                         break;
                       case 1: // Flamethrower Barrel
                         d.lineTo(
