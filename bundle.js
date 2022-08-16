@@ -2928,9 +2928,9 @@
                           v + X * Math.cos(D - G),
                           r + X * Math.sin(D - G)
                         );
-                        context.lineJoin = config.graphical.pointy ? "round" : "round";
-                        context.closePath();
-                        context.stroke();
+                        d.lineJoin = H.retrieveFromLocalStorage ? "round" : "round";
+                        d.closePath();
+                        d.stroke();
                         break;
                       case 1: // Flamethrower Barrel
                         d.lineTo(
@@ -2945,31 +2945,42 @@
                           v + X * Math.cos(D - 1 + 10),
                           r + X * Math.sin(D - 1 + 10)
                         );
+                        d.lineJoin = H.retrieveFromLocalStorage ? "round" : "round";
+                        d.closePath();
+                        d.stroke();
                         break;
                       case 2: // Glass Barrel
                         d.lineTo(
-                          v + X + 0 * Math.cos(D + b + 0),
-                          r + X + 0 * Math.sin(D + b + 0)
+                          v + X * Math.cos(D + b + 0),
+                          r + X * Math.sin(D + b + 0)
                         );
                         d.lineTo(
-                          v + C + 1 * Math.cos(D + Math.PI - b + 1),
-                          r + C + 1 * Math.sin(D + Math.PI - b + 1)
+                          v + C * Math.cos(D + Math.PI - b + 1),
+                          r + C * Math.sin(D + Math.PI - b + 1)
                         );
                         d.lineTo(
-                          v + C + 1 * Math.cos(D + Math.PI + b + 1),
-                          r + C + 1 * Math.sin(D + Math.PI + b + 1)
+                          v + C * Math.cos(D + Math.PI + b + 1),
+                          r + C * Math.sin(D + Math.PI + b + 1)
                         );
                         d.lineTo(
-                          v + X + 0 * Math.cos(D - b + 0),
-                          r + X + 0 * Math.sin(D - b + 0)
+                          v + X * Math.cos(D - b + 0),
+                          r + X * Math.sin(D - b + 0)
                         );
+                        d.lineJoin = H.retrieveFromLocalStorage ? "round" : "round";
+                        d.closePath();
+                        d.stroke();
+                        break;
                       /*case 3: // Round Barrel
-                context.ellipse(x, y, length, height, angle, 0, 2 * Math.PI, true);*/
+                        d.ellipse(x, y, length, height, b, 0, 2 * Math.PI, true);
+                        d.lineJoin = H.retrieveFromLocalStorage ? "round" : "round";
+                        d.closePath();
+                        d.stroke();
+                        break;*/
                     }
-                    d.closePath();
+                    /*d.closePath();
                     B.graphical.inversedRender
                       ? (d.stroke(), d.fill())
-                      : (d.fill(), d.stroke());
+                      : (d.fill(), d.stroke());*/
                   }
                 }
               else throw Error("Mismatch gun number with mockup.");
