@@ -2928,7 +2928,7 @@
                           v + X * Math.cos(D - G),
                           r + X * Math.sin(D - G)
                         );
-                        d.lineJoin = H.retrieveFromLocalStorage ? "round" : "round";
+                        d.lineJoin = H.retrieveFromLocalStorage2("optNoPointy") ? "round" : "round";
                         d.closePath();
                         d.stroke();
                         break;
@@ -2945,15 +2945,11 @@
                           v + X * Math.cos(D - 1 + 10),
                           r + X * Math.sin(D - 1 + 10)
                         );
-                        d.lineJoin = H.retrieveFromLocalStorage ? "round" : "round";
+                        d.lineJoin = H.retrieveFromLocalStorage2("optNoPointy") ? "round" : "round";
                         d.closePath();
                         d.stroke();
                         break;
                       case 2: // Glass Barrel
-                        d.lineTo(
-                          v + X * Math.cos(D + b + 0),
-                          r + X * Math.sin(D + b + 0)
-                        );
                         d.lineTo(
                           v + C * Math.cos(D + Math.PI - b + 1),
                           r + C * Math.sin(D + Math.PI - b + 1)
@@ -2966,7 +2962,7 @@
                           v + X * Math.cos(D - b + 0),
                           r + X * Math.sin(D - b + 0)
                         );
-                        d.lineJoin = H.retrieveFromLocalStorage ? "round" : "round";
+                        d.lineJoin = H.retrieveFromLocalStorage2("optNoPointy") ? "round" : "round";
                         d.closePath();
                         d.stroke();
                         break;
