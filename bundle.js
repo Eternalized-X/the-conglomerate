@@ -2912,7 +2912,7 @@
                     }
                     k(h, e(COLOR, SKIN));
                     d.beginPath();
-                    d.moveTo(v + X * Math.cos(D + G), r + X * Math.sin(D + G));
+                    /*d.moveTo(v + X * Math.cos(D + G), r + X * Math.sin(D + G));
                     d.lineTo(
                       v + C * Math.cos(D + Math.PI - b),
                       r + C * Math.sin(D + Math.PI - b)
@@ -2927,8 +2927,8 @@
                       ? (d.stroke(), d.fill())
                       : (d.fill(), d.stroke());
                   }
-                }
-                    /*let skin = 0;
+                }*/
+                    let skin = 0;
                     switch (skin) {
                       case 0: // Normal Barrel
                         d.lineTo(
@@ -2946,9 +2946,8 @@
                         d.lineJoin = ("optNoPointy") ? "round" : "round";
                         d.closePath();
                         B.graphical.inversedRender
-                      /*? (d.stroke(), d.fill();
-                      : (d.fill(),*/ //d.stroke();
-                       /* break;
+                        d.stroke(),
+                        break;
                       case 1: // Flamethrower Barrel
                         d.lineTo(
                           v + C * Math.cos(D + Math.PI - b - 10),
@@ -2965,9 +2964,8 @@
                         d.lineJoin = ("optNoPointy") ? "round" : "round";
                         d.closePath();
                         B.graphical.inversedRender
-                      /*? (d.stroke(), d.fill();
-                      : (d.fill(),*/ //d.stroke();
-                        /*break;
+                        d.stroke(),
+                        break;
                       case 2: // Glass Barrel
                         d.lineTo(
                           v + C * Math.cos(D + Math.PI - b + 1),
@@ -2984,17 +2982,17 @@
                         d.lineJoin = ("optNoPointy") ? "round" : "round";
                         d.closePath();
                         B.graphical.inversedRender
-                      /*? (d.stroke(), d.fill();
-                      : (d.fill(),*/ //d.stroke();
-                        //break;
+                        d.stroke(),
+                        break;
                       /*case 3: // Round Barrel
                         d.ellipse(x, y, length, height, b, 0, 2 * Math.PI, true);
                         d.lineJoin = H.retrieveFromLocalStorage ? "round" : "round";
                         d.closePath();
                         d.stroke();
-                        break;
+                        break;*/
+                    } 
                   }
-                }*/
+                }
               else throw Error("Mismatch gun number with mockup.");
               h.globalAlpha = 1;
               k(h, E);
@@ -4943,7 +4941,7 @@
             id: "ed",
             type: "thebackgrounds",
             code: "heroku-singapore-f",
-            at: p.glitch("pastoral-sideways-rugby"),
+            at: p.glitch("elite-io-official-template"),
             prefer: !0,
             featured: 0,
           },
