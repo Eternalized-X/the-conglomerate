@@ -2912,7 +2912,7 @@
                     }
                     k(h, e(COLOR, SKIN));
                     d.beginPath();
-                    .moveTo(v + X * Math.cos(D + G), r + X * Math.sin(D + G));
+                    d.moveTo(v + X * Math.cos(D + G), r + X * Math.sin(D + G));
                    /* d.lineTo(
                       v + C * Math.cos(D + Math.PI - b),
                       r + C * Math.sin(D + Math.PI - b)
@@ -2943,10 +2943,10 @@
                           v + X * Math.cos(D - G),
                           r + X * Math.sin(D - G)
                         );
-                        d.lineJoin = ("optNoPointy") ? "round" : "round";
+                        d.lineJoin = B.graphical.pointy ? "round" : "round";
                         d.closePath();
                         B.graphical.inversedRender
-                        d.stroke(),
+                        d.stroke();
                         break;
                       case 1: // Flamethrower Barrel
                         d.lineTo(
@@ -2961,10 +2961,10 @@
                           v + X * Math.cos(D - 1 + 10),
                           r + X * Math.sin(D - 1 + 10)
                         );
-                        d.lineJoin = ("optNoPointy") ? "round" : "round";
+                        d.lineJoin = B.graphical.pointy ? "round" : "round";
                         d.closePath();
                         B.graphical.inversedRender
-                        d.stroke(),
+                        d.stroke();
                         break;
                       case 2: // Glass Barrel
                         d.lineTo(
@@ -2979,10 +2979,10 @@
                           v + X * Math.cos(D - b + 0),
                           r + X * Math.sin(D - b + 0)
                         );
-                        d.lineJoin = ("optNoPointy") ? "round" : "round";
+                        d.lineJoin = B.graphical.pointy ? "round" : "round";
                         d.closePath();
                         B.graphical.inversedRender
-                        d.stroke(),
+                        d.stroke();
                         break;
                       /*case 3: // Round Barrel
                         d.ellipse(x, y, length, height, b, 0, 2 * Math.PI, true);
