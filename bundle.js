@@ -2895,7 +2895,6 @@
                     var C = f * (D.length / 2 - (1 === D.aspect ? w[A] : 0)),
                       L = (f * D.width) / 2,
                       COLOR = D.color,
-                      SKIN = D.skin,
                       G = D.aspect;
                     D = D.angle + m;
                     var X = L;
@@ -2907,13 +2906,10 @@
                     if (COLOR == null) {
                       COLOR = 16;
                     }
-                    if (SKIN == null) {
-                      SKIN = 0;
-                    }
-                    k(h, e(COLOR, SKIN));
+                    k(h, e(COLOR));
                     d.beginPath();
-                    //d.moveTo(v + X * Math.cos(D + G), r + X * Math.sin(D + G));
-                   /* d.lineTo(
+                    d.moveTo(v + X * Math.cos(D + G), r + X * Math.sin(D + G));
+                    d.lineTo(
                       v + C * Math.cos(D + Math.PI - b),
                       r + C * Math.sin(D + Math.PI - b)
                     );
@@ -2927,8 +2923,8 @@
                       ? (d.stroke(), d.fill())
                       : (d.fill(), d.stroke());
                   }
-                }*/
-                    let skin = 0;
+                }
+                   /* let skin = 0;
                     switch (skin) {
                       case 0: // Normal Barrel
                         d.lineTo(
@@ -2945,8 +2941,8 @@
                         );
                         d.lineJoin = B.graphical.pointy ? "round" : "round";
                         d.closePath();
-                        B.graphical.inversedRender
                         d.stroke();
+                        d.fill();
                         break;
                       case 1: // Flamethrower Barrel
                         d.lineTo(
@@ -2963,8 +2959,8 @@
                         );
                         d.lineJoin = B.graphical.pointy ? "round" : "round";
                         d.closePath();
-                        B.graphical.inversedRender
                         d.stroke();
+                        d.fill();
                         break;
                       case 2: // Glass Barrel
                         d.lineTo(
@@ -2981,16 +2977,14 @@
                         );
                         d.lineJoin = B.graphical.pointy ? "round" : "round";
                         d.closePath();
-                        B.graphical.inversedRender
                         d.stroke();
-                        break;
+                        break;*/
                       /*case 3: // Round Barrel
                         d.ellipse(x, y, length, height, b, 0, 2 * Math.PI, true);
                         d.lineJoin = H.retrieveFromLocalStorage ? "round" : "round";
                         d.closePath();
                         d.stroke();
                         break;*/
-                    } 
                   }
                 }
               else throw Error("Mismatch gun number with mockup.");
