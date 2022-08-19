@@ -2912,8 +2912,8 @@
                     }
                     k(h, e(COLOR, SKIN));
                     d.beginPath();
-                    /*d.moveTo(v + X * Math.cos(D + G), r + X * Math.sin(D + G));
-                    d.lineTo(
+                    .moveTo(v + X * Math.cos(D + G), r + X * Math.sin(D + G));
+                   /* d.lineTo(
                       v + C * Math.cos(D + Math.PI - b),
                       r + C * Math.sin(D + Math.PI - b)
                     );
