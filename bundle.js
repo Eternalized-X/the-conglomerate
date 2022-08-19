@@ -2985,8 +2985,8 @@
                         d.closePath();
                         d.stroke();
                         break;*/
-                  }
-                }
+                //  }
+                //}
               else throw Error("Mismatch gun number with mockup.");
               h.globalAlpha = 1;
               k(h, E);
