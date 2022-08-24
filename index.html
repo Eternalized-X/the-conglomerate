@@ -27,7 +27,7 @@
    <meta name="msapplication-TileColor" content="#b493d3">
     <meta name="msapplication-TileImage" content="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/appicon.png">
   <!-- CSS -->
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fre:400,700" rel="stylesheet">
   <link rel="stylesheet" href="/main.css">
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="256x256" href="https://cdn.glitch.me/85965574-7ecf-46a8-975b-2c7c31ba4cec/video_image.jpeg?v=1640711954772">
@@ -252,8 +252,11 @@ function PlaySound() {
         </div>
         <div class="startMenuHolder shrinkable">
           <div class="changelogSelectorContainer">
-          <div class="changelogSelector" id="changelogSelector">
-              <span data-type="changelog" title="More bullets than Touhou">Changelog</span>
+            <div class="changelogSelector" id="changelogSelector">
+              <span data-type="updates" class="active" title="All major updates">Updates</span>
+              <span data-type="events" title="Major updates involving events or gamemodes">Events &amp; Gamemodes</span>
+              <span data-type="balances" title="Every balance update, major or minor">Balance</span>
+              <span data-type="changelog" title="Every single update">Changelog</span>
             </div>
           </div>
           <div id="patchNotes" class="shadowScroll updates"></div>

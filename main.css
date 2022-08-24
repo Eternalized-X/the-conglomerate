@@ -276,8 +276,8 @@ a.menuTab:link:hover, a.menuTab:visited:hover {
 }
 
 .changelogSelectorContainer {
-  height: 25px;
-  font: bold 20px Ubuntu;
+  height: 15px;
+  font: bold 12px Fredoka_One;
   text-align: center;
   padding: 0 15px 5px 0;
   overflow: auto hidden;
@@ -330,7 +330,7 @@ a.menuTab:link:hover, a.menuTab:visited:hover {
 
 .sliderHolder {
   width: 350px;
-  height: 300px;
+  height: 295px;
   overflow: hidden;
 }
 body.mobile .sliderHolder {
