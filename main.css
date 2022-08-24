@@ -48,7 +48,7 @@ h1 {
   margin: 0;
   color: black;
   text-align: center;
-  font: bold 40px/1.1 Ubuntu;
+  font: bold 30px/1.1 Ubuntu;
 }
 
 h1:active {
@@ -277,7 +277,7 @@ a.menuTab:link:hover, a.menuTab:visited:hover {
 
 .changelogSelectorContainer {
   height: 15px;
-  font: bold 12px Fredoka_One;
+  font: bold 12px Ubuntu;
   text-align: center;
   padding: 0 15px 5px 0;
   overflow: auto hidden;
