@@ -4186,8 +4186,8 @@
                       q++,
                       c * n,
                       d * n,
-                      80 * n,
-                      80 * n
+                      100 * n,
+                      100 * n
                     );
                     g.globalAlpha = 0.3;
                     g.fillStyle = e(u + 10);
