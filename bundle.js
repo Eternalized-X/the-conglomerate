@@ -3194,11 +3194,11 @@
             let d = 0;
             oa++;
             let n =
-                Math.max(b.screenWidth, (16 * b.screenHeight) / 9) /
+                Math.max(b.screenWidth, (4 * b.screenHeight) / 9) /
                 (1280 >= b.screenWidth
                   ? 1280
-                  : 1920 <= b.screenWidth
-                  ? 1920
+                  : 1700 <= b.screenWidth
+                  ? 1700
                   : b.screenWidth),
               q,
               y;
