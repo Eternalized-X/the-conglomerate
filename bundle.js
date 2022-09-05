@@ -3428,7 +3428,7 @@
                 na = O.max;
               do {
                 if (!b.showTree) break;
-                let a = M.find((b) => "basic" === b.name);
+                let a = M.find((b) => "noBasic" === b.name);
                 if (!a) break;
                 let c = [],
                   d = [],
@@ -3591,7 +3591,7 @@
                 );
                 g.fill();
               }
-              b.mobile && L(1.2);
+              b.mobile && L(1.3);
               {
                 let c = b.screenWidth / 2,
                   d = 20;
@@ -4176,7 +4176,7 @@
                     h = 0,
                     k = d,
                     x = 0;
-                  la += 0.01;
+                  la += 0.05;
                   let u = 0,
                     q = 0;
                   A.upgrades.forEach((m) => {
