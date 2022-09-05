@@ -3194,11 +3194,11 @@
             let d = 0;
             oa++;
             let n =
-                Math.max(b.screenWidth, (4 * b.screenHeight) / 9) /
+                Math.max(b.screenWidth, (16 * b.screenHeight) / 9) /
                 (1280 >= b.screenWidth
                   ? 1280
-                  : 1700 <= b.screenWidth
-                  ? 1700
+                  : 1920 <= b.screenWidth
+                  ? 1920
                   : b.screenWidth),
               q,
               y;
@@ -4186,8 +4186,8 @@
                       q++,
                       c * n,
                       d * n,
-                      100 * n,
-                      100 * n
+                      80 * n,
+                      80 * n
                     );
                     g.globalAlpha = 0.3;
                     g.fillStyle = e(u + 10);
