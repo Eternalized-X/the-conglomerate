@@ -1018,7 +1018,7 @@
         })();
         return {
           stat: b(10),
-          upgrade: b(20),
+          upgrade: b(30),
           hover: b(1),
           skipUpgrades: b(1),
         };
@@ -4189,7 +4189,8 @@
                       100 * n,
                       100 * n
                     );
-                    g.globalAlpha = 0.3;
+                    g.globalAlpha = 0.5;
+                    u %=9
                     g.fillStyle = e(u + 10);
                     G(c, d, 100, 100);
                     g.globalAlpha = 0.1;
@@ -4245,8 +4246,8 @@
                     g.lineWidth = 3;
                     G(c, d, 100, 100, !0);
                     0 !== ++x % 5 || b.mobile
-                      ? (c += 105 * a)
-                      : ((c = f), (d += 105));
+                      ? (c += 104 * a)
+                      : ((c = f), (d += 104));
                   });
                   let m = ta("Don't Upgrade", 11) + 10,
                     t = (h + 100 + 14 + f - 15) / 2,
