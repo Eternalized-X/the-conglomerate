@@ -3169,21 +3169,6 @@
               m(),
               m(),
               m(),
-              m(),
-              m(),
-              m(),
-              m(),
-              m(),
-              m(),
-              m(),
-              m(),
-              m(),
-              m(),
-              m(),
-              m(),
-              m(),
-              m(),
-              m(),
               m()
             ],
             ea = [
@@ -3443,7 +3428,7 @@
                 na = O.max;
               do {
                 if (!b.showTree) break;
-                let a = M.find((b) => "noBasic" === b.name);
+                let a = M.find((b) => "Basic" === b.name);
                 if (!a) break;
                 let c = [],
                   d = [],
