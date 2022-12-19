@@ -1,3 +1,7 @@
+# Update
+
+- elite.io seems to be dead now but now me and tricky will be revive this game now soon
+
 # Patch
 - For Normal Updates
 - Can only appear in "Changelog"
