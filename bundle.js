@@ -3898,7 +3898,7 @@
                   (m -= 40));
                 if (B.graphical.screenshotMode)
                   W[6].draw(
-                    "Elite.io",
+                    "The Conglomerate",
                     h + 200,
                     m - 2,
                     15,
@@ -3908,7 +3908,7 @@
                 else {
                   if (b.showDebug) {
                     W[6].draw(
-                      "Elite.io",
+                      "The Conglomerate ",
                       h + 200,
                       m - 84 - 2,
                       15,
@@ -4915,27 +4915,9 @@
         servers: [
           {
             visible: 0,
-            id: "wd",
-            type: "siege",
-            code: "glitch-worldwide-s",
-            at: p.glitch("sage-animated-backpack"),
-            prefer: !0,
-            featured: 0, // For Featured Status.
-          },
-          {
-            visible: 0,
-            id: "wd",
-            type: "ffa",
-            code: "glitch-worldwide-f",
-            at: p.glitch("heavy-pouncing-voyage"),
-            prefer: !0,
-            featured: 0, // For Featured Status.
-          },
-          {
-            visible: 0,
-            id: "ed",
+            id: "ba",
             type: "thebackgrounds",
-            code: "heroku-singapore-f",
+            code: "replit-singapore-f",
             at: p.glitch("elite-io-official-template"),
             prefer: !0,
             featured: 0,
