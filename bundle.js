@@ -3908,7 +3908,7 @@
                 else {
                   if (b.showDebug) {
                     W[6].draw(
-                      "The Conglomerate ",
+                      "The Conglomerate",
                       h + 200,
                       m - 84 - 2,
                       15,
@@ -3945,7 +3945,7 @@
                     );
                   } else
                     W[6].draw(
-                      "Elite.io",
+                      "The Conglomerate",
                       h + 200,
                       m - 42 - 2,
                       15,
